@@ -39,7 +39,98 @@
 	</header>
 
 	<main class="page-main page-main--form">
+		<div class="page-main__title-wrapper">
+			<h1 class="page-main__title">Подбор программы</h1>
+			<p class="page-main__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+		</div>
+		<form class="page-main__form form" action="#" method="POST">
+			<fieldset>
+				<h2 class="visually-hidden">Данные питомца</h2>
+				<div class="form__intro-wrapper">
+					<div class="form__pet-info-block">
+						<div class="form__text-field">
+							<label class="form__text-label" for="pet-name">Имя:*</label>
+							<div class="form__input-text-wrapper">
+								<input class="form__input-text" id="pet-name" type="text" placeholder="Барсик">
+							</div>
+						</div>
+						<div class="form__text-fieldd">
+							<label class="form__text-label" for="pet-weight">Вес (кг):*</label>
+							<div class="form__input-text-wrapper">
+								<input class="form__input-text" id="pet-weight" type="text" placeholder="7">
+							</div>
+						</div>
+						<div class="form__text-field">
+							<label class="form__text-label" for="pet-age">Возраст (лет):</label>
+							<div class="form__input-text-wrapper">
+								<input class="form__input-text" id="pet-age" type="text" placeholder="7">
+							</div>
+						</div>
+					</div>
+					<div class="form__pet-program-block">
+						<div class="form__pet-program">
+							<input class="visually-hidden" id="weight-loss" name="radio" type="radio" checked>
+							<label class="form__pet-program-label" for="weight-loss">Похудение</label>
+						</div>
+						<div class="form__pet-program">
+							<input class="visually-hidden" id="weight-add" name="radio" type="radio">
+							<label class="form__pet-program-label" for="weight-add">Набор массы</label>
+						</div>
+						<div class="form__pet-program">
+							<input class="visually-hidden" id="dont-know" name="radio" type="radio">
+							<label class="form__pet-program-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
 
+			<fieldset>
+				<h2 class="form__title">Контактные данные (владельца кота)</h2>
+				<div class="form__owner-contacts-wrapper">
+					<div class="form__text-field">
+						<label class="form__text-label" for="email">E-mail:*</label>
+						<div class="form__input-text-wrapper">
+							<input class="form__input-text" id="email" type="email" placeholder="kuklachev@gmail.com">
+						</div>
+					</div>
+					<div class="form__text-field">
+						<label class="form__text-label" for="tel">Телефон:*</label>
+						<div class="form__input-text-wrapper">
+							<input class="form__input-text" id="tel" type="tel" placeholder="8 (960) 900-60-90">
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<h2 class="form-title">Комментарий</h2>
+				<textarea name="comment" id="comment" cols="50" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
+			</fieldset>
+
+			<fieldset>
+				<h2 class="form-title">Дополнительно</h2>
+				<div class="form__add-wrapper">
+					<div class="form__add-field">
+						<input class="visually-hidden" id="sugar" name="sugar" type="checkbox" checked>
+						<label class="form__add-label" for="sugar">Сахарозаменитель</label>
+					</div>
+					<div class="form__add-field">
+						<input class="visually-hidden" id="water" name="water" type="checkbox">
+						<label class="form__add-label" for="water">Питьевая вода</label>
+					</div>
+					<div class="form__add-field">
+						<input class="visually-hidden" id="milk" name="milk" type="checkbox">
+						<label class="form__add-label" for="milk">Молоко</label>
+					</div>
+					<div class="form__add-field">
+						<input class="visually-hidden" id="vitamin" name="vitamin" type="checkbox">
+						<label class="form__add-label" for="vitamin">Витамины</label>
+					</div>
+				</div>
+			</fieldset>
+			<button class="form-button green-button" type="submit">Отправить заявку</button>
+			<span class="form__required-messege">* — Обязательные поля</span>
+		</form>
 	</main>
 
 	<footer class="page-footer page-footer--form">
