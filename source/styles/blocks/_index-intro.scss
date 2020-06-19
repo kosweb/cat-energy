@@ -1,0 +1,7 @@
+.index-intro {
+
+	&__title {
+		@include main-title;
+		color: $white;
+	}
+}

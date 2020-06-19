@@ -1,12 +1,50 @@
 .page-header {
+	position: relative;
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
+
+	@media (min-width: $tablet) {
+		padding-left: $tablets-paddings;
+		padding-right: $tablets-paddings;
+	}
+
+	@media (min-width: $desktop) {
+		padding-left: $desktops-paddings;
+		padding-right: $desktops-paddings;
+	}
+
+	&--index {
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			display: block;
+			top: 65px;
+			left: 0;
+			width: 100%;
+			height: 305px;
+			background-image: url('../../img/content/index-background-mobile@1x.jpg'), linear-gradient(to right, $green-3, $green-4);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		@media (max-width: $phone-max) and (min-resolution: $retina-dpi),
+      (max-width: $phone-max) and (min-resolution: $retina-dppx) {
+      &::before {
+        background-image: url("../img/index-background-mobile@2x.jpg");
+      }
+    }
+	}
 
 	&__logo-block {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		align-items: center;
-		height: 65px;
+
+		@media (max-width: $tablet) {
+			height: 65px;
+		}
 
 		@media (min-width: $tablet) {
 			display: block;
@@ -25,7 +63,7 @@
 
 		@media (min-width: $desktop) {
 			width: 202px;
-			height: 59px;
+			height: 60px;
 		}
 	}
 
@@ -51,6 +89,13 @@
 		@media (min-width: $tablet) {
 			display: none;
 		}
+	}
+
+	&__nav {
+		position: absolute;
+		display: none;
+		left: 0;
+		width: 100%;
 	}
 }
 

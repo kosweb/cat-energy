@@ -1,0 +1,43 @@
+.main-nav {
+
+	&__list {
+		@include reset-list-style;
+		display: grid;
+	}
+
+	&__link {
+		display: block;
+		padding-top: 24px;
+		padding-bottom: 24px;
+		font-family: 'Oswald';
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 20px;
+		text-align: center;
+		color: $black;
+		background-color: $white;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-bottom: 1px solid $grey-9;
+
+		&:first-child {
+			border-top: 1px solid $grey-9;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&--opened {
+		display: block;
+	}
+
+	@media (min-width: $tablet) {
+
+	}
+
+	@media (min-width: $desktop) {
+
+	}
+}

@@ -17,3 +17,12 @@
 
 	list-style: none;
 }
+
+@mixin main-title {
+	margin: 0;
+	font-family: Oswald;
+	color: $grey-1;
+	font-size: 36px;
+	line-height: 60px;
+	font-weight: 400;
+}
