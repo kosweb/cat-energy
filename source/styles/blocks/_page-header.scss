@@ -1,0 +1,92 @@
+.page-header {
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
+
+	&__logo-block {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		height: 65px;
+
+		@media (min-width: $tablet) {
+			display: block;
+		}
+	}
+
+	&__logo {
+		width: 33px;
+		height: 38px;
+		justify-self: start;
+
+		@media (min-width: $tablet) {
+			width: 173px;
+			height: 58px;
+		}
+
+		@media (min-width: $desktop) {
+			width: 202px;
+			height: 59px;
+		}
+	}
+
+	&__logo-text-link {
+		justify-self: center;
+		line-height: 0;
+
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__nav-button {
+		position: relative;
+		width: 25px;
+		height: 20px;
+		padding: 0;
+		justify-self: end;
+		border: none;
+		background-color: transparent;
+		outline: none;
+
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+}
+
+.nav-button--closed {
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 25px;
+		height: 2px;
+		background-color: $grey-2;
+		box-shadow: 0 9px 0 0 $grey-2, 0 18px 0 0 $grey-2;
+	}
+}
+
+.nav-button--opened {
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 25px;
+		height: 2px;
+		box-shadow: none;
+		background-color: $grey-2;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+}
