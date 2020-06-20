@@ -9,6 +9,12 @@
 		padding-right: $tablets-paddings;
 	}
 
+	@media (min-width: $desktop) {
+		padding-top: 50px;
+		padding-left: $desktops-paddings;
+		padding-right: $desktops-paddings;
+	}
+
 	@media (min-width: $tablet) and (max-width: $tablet-max) {
 		&__decore-line {
 			width: 100%;
