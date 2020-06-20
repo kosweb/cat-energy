@@ -3,6 +3,26 @@
 	flex-direction: column;
 	align-items: center;
 
+	@media (min-width: $tablet) {
+		align-items: flex-start;
+		position: relative;
+
+		&__img {
+			margin-left: -25px;
+
+			@media (min-width: $desktop) {
+				margin-left: 0;
+				position: absolute;
+				top: 30px;
+				left: 480px;
+			}
+		}
+	}
+
+	@media (min-width: $desktop) {
+		min-height: 610px;
+	}
+
 	&__title {
 		@include main-title;
 		width: 250px;
@@ -18,8 +38,11 @@
 		@media (min-width: $tablet) {
 			margin-top: 60px;
 			margin-left: 90px;
+			margin-bottom: 30px;
 			font-size: 60px;
+			line-height: 60px;
 			width: 415px;
+			text-align: left;
 		}
 	}
 
@@ -30,9 +53,24 @@
 		color: $white;
 		text-align: center;
 		text-transform: uppercase;
+
+		@media (min-width: $tablet) {
+			color: $grey-1;
+			margin-left: 90px;
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
 	}
 
 	&__button {
-		width: 100%;
+		@media(max-width: $phone-max) {
+			width: 100%;
+		}
+
+		@media (min-width: $tablet) {
+			position: absolute;
+			top: 280px;
+			left: 90px;
+		}
 	}
 }
