@@ -18,6 +18,7 @@
 
 	@media (min-width: $desktop) {
 		grid-template-columns: 202px 1fr;
+		padding-top: 55px;
 		padding-left: $desktops-paddings;
 		padding-right: $desktops-paddings;
 	}

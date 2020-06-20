@@ -21,7 +21,7 @@
 	}
 
 	@media (min-width: $desktop) {
-		min-height: 610px;
+		min-height: 585px;
 	}
 
 	&__title {
@@ -37,13 +37,17 @@
 		}
 
 		@media (min-width: $tablet) {
+			width: 415px;
 			margin-top: 60px;
 			margin-left: 90px;
 			margin-bottom: 35px;
 			font-size: 60px;
 			line-height: 60px;
-			width: 415px;
 			text-align: left;
+		}
+
+		@media (min-width: $desktop) {
+			margin-left: 85px;
 		}
 	}
 
@@ -61,6 +65,10 @@
 			margin-bottom: 20px;
 			font-size: 20px;
 		}
+
+		@media (min-width: $desktop) {
+			margin-left: 85px;
+		}
 	}
 
 	&__button {
@@ -72,6 +80,10 @@
 			position: absolute;
 			top: 280px;
 			left: 90px;
+		}
+
+		@media (min-width: $desktop) {
+			left: 85px;
 		}
 	}
 }
