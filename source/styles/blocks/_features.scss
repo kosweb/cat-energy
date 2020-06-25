@@ -1,18 +1,13 @@
 .features {
-	padding-top: 10px;
-	padding-left: $phones-paddings;
-	padding-right: $phones-paddings;
+	padding: $phones-paddings;
 
 	@media (min-width: $tablet) {
-		padding-top: 20px;
-		padding-left: $tablets-paddings;
-		padding-right: $tablets-paddings;
+		padding: $tablets-paddings;
+		padding-bottom: 50px;
 	}
 
 	@media (min-width: $desktop) {
-		padding-top: 50px;
-		padding-left: $desktops-paddings;
-		padding-right: $desktops-paddings;
+		padding: $desktops-paddings;
 	}
 
 	@media (min-width: $tablet) and (max-width: $tablet-max) {
@@ -45,7 +40,6 @@
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 185px;
 			grid-row-gap: 85px;
-			padding-bottom: 55px;
 			counter-reset: item_number;
 		}
 

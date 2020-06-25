@@ -93,51 +93,55 @@
 			<div class="features__decore-line"></div>
 
 			<section class="example">
-				<div class="example__block example__block-about">
-					<h2 class="example__title">Живой пример</h2>
-					<p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-						Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-					<div class="example__stats">
-						<div class="example__stats-block">
-							<b class="example__result">5 кг</b>
-							<div class="example__description">снижение веса</div>
+				<div class="example__wrapper">
+					<div class="example__block example__block-about">
+						<h2 class="example__title">Живой пример</h2>
+						<p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+							Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+						<div class="example__stats-costs">
+							<div class="example__stats">
+								<div class="example__stats-block">
+									<b class="example__result">5 кг</b>
+									<p class="example__result-description">снижение веса</p>
+								</div>
+								<div class="example__stats-block">
+									<b class="example__result">60 дней</b>
+									<p class="example__result-description">затрачено времени</p>
+								</div>
+							</div>
+							<p class="example__costs">
+								<span class="example__costs-mark">Затраты на питание:</span>
+								<span class="example__costs-value">15 000 руб.</span>
+							</p>
 						</div>
-						<div class="example__stats-block">
-							<b class="example__result">60 дней</b>
-							<div class="example__description">затрачено времени</div>
+					</div>
+					<div class="example__block example__block-cats">
+						<div class="example__before example__cat-hide">
+							<picture>
+								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
+								<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
+
+								<source media="(min-width: 768px)" srcset="./img/content/before@1x.png, ./img/content/before@2x.png 2x">
+								<img class="example__img" src="./img/content/before-mobile@1x.png" srcset="./img/content/before-mobile@2x.png 2x" alt="До">
+							</picture>
 						</div>
-					</div>
-					<p class="example__costs">
-						<span class="example__costs-mark">Затраты на питание:</span>
-						<span class="example__costs-value">15 000 руб.</span>
-					</p>
-				</div>
-				<div class="example__block example__block-cats">
-					<div class="example__before">
-						<picture>
-							<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
-							<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
+						<div class="example__after">
+							<picture>
+								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/after@1x.webp, ./img/content/after@2x.webp 2x">
+								<source type="image/webp" srcset="./img/content/after-mobile@1x.webp, ./img/content/after-mobile@2x.webp 2x">
 
-							<source media="(min-width: 768px)" srcset="./img/content/before@1x.png, ./img/content/before@2x.png 2x">
-							<img class="example__img" src="./img/content/before-mobile@1x.png" srcset="./img/content/before-mobile@2x.png 2x" alt="До">
-						</picture>
-					</div>
-					<div class="example__after">
-						<picture>
-							<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/after@1x.webp, ./img/content/after@2x.webp 2x">
-							<source type="image/webp" srcset="./img/content/after-mobile@1x.webp, ./img/content/after-mobile@2x.webp 2x">
-
-							<source media="(min-width: 768px)" srcset="./img/content/after@1x.png, ./img/content/after@2x.png 2x">
-							<img class="example__img" src="./img/content/after-mobile@1x.png" srcset="./img/content/after-mobile@2x.png 2x" alt="После">
-						</picture>
-					</div>
-					<div class="example__toggles">
-						<input class="visually-hidden" id="before" type="radio" checked>
-						<input class="visually-hidden" id="after" type="radio">
-						<label for="before" class="example__option">Было</label>
-						<label for="after" class="example__option">Стало</label>
-						<div class="example__range">
-							<div class="example__range-option"></div>
+								<source media="(min-width: 768px)" srcset="./img/content/after@1x.png, ./img/content/after@2x.png 2x">
+								<img class="example__img" src="./img/content/after-mobile@1x.png" srcset="./img/content/after-mobile@2x.png 2x" alt="После">
+							</picture>
+						</div>
+						<div class="example__toggles">
+							<input class="visually-hidden" id="before" type="radio" checked>
+							<label for="before" class="example__option example__option--checked">Было</label>
+							<div class="example__range">
+								<div class="example__range-option"></div>
+							</div>
+							<input class="visually-hidden" id="after" type="radio">
+							<label for="after" class="example__option">Стало</label>
 						</div>
 					</div>
 				</div>
@@ -206,5 +210,6 @@
 		</footer>
 
 		<script src="./js/index.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
   </body>
 </html>
