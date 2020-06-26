@@ -71,6 +71,7 @@
 
 		@media (min-width: $desktop) {
 			display: block;
+			padding-top: 70px;
 		}
 	}
 
@@ -78,7 +79,13 @@
 		display: flex;
 		justify-content: space-between;
 		padding-bottom: 25px;
+
+		@media (min-width: $desktop) {
+			padding-bottom: 50px;
+		}
 	}
+
+
 
 	&__stats-block {
 		position: relative;
@@ -255,6 +262,10 @@
 			bottom: 60px;
 			z-index: 1;
 		}
+
+		@media (min-width: $desktop) {
+			bottom: 65px;
+		}
 	}
 
 	&__option {
@@ -274,6 +285,10 @@
 			left: 0;
 			bottom: -5px;
 			border-bottom: 1px dashed $grey-13;
+		}
+
+		@media (min-width: $desktop) {
+			font-size: 20px;
 		}
 	}
 
