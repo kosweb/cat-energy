@@ -3,6 +3,12 @@
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
 
+	@media (max-width: $phone-max) {
+		&--catalog {
+			border-bottom: 1px solid $grey-9;
+		}
+	}
+
 	@media (min-width: $tablet) {
 		display: grid;
 		grid-template-columns: 173px 1fr;

@@ -18,6 +18,7 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		border-bottom: 1px solid $grey-9;
+		background-color: $white;
 
 		&:first-child {
 			border-top: 1px solid $grey-9;
@@ -50,6 +51,8 @@
 			line-height: 24px;
 			font-weight: 400;
 			transition: all 0.2s ease;
+			background-color: transparent;
+
 
 			&:first-child {
 				border-top: none;
@@ -91,6 +94,28 @@
 
 			&-current::after {
 				background-color: $white;
+			}
+		}
+	}
+}
+
+.page-header--catalog {
+	.main-nav {
+		@media (min-width: $desktop) {
+			&__link {
+				color: $grey-1;
+
+				&:hover {
+					color: rgba($color: $grey-1, $alpha: 0.6);
+				}
+
+				&:active {
+					color: rgba($color: $grey-1, $alpha: 0.3);
+				}
+
+				&-current::after {
+					background-color: $green;
+				}
 			}
 		}
 	}
