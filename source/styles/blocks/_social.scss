@@ -1,0 +1,56 @@
+.social {
+	&__list {
+		@include reset-list-style;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		width: 128px;
+		padding-top: $phones-paddings;
+		padding-bottom: $phones-paddings;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		transition: all 0.2s ease;
+
+		@media (min-width: $tablet) {
+			&--vk {
+				svg {
+					width: 30px;
+					height: 16px;
+				}
+			}
+
+			&--inst {
+				svg {
+					width: 23px;
+					height: 23px;
+				}
+			}
+
+			&--fb {
+				svg {
+					width: 14px;
+					height: 28px;
+				}
+			}
+		}
+
+		&:hover {
+			svg {
+				fill: $green;
+			}
+		}
+
+		&:active {
+			opacity: 0.3;
+		}
+	}
+
+	svg {
+		fill: $grey-3;
+		transition: all 0.2s ease;
+	}
+}

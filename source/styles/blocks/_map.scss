@@ -1,0 +1,81 @@
+.map {
+
+	@media (min-width: $desktop) {
+		position: relative;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 20px;
+		background-color: $white;
+
+		@media (min-width: $tablet) {
+			padding: 70px;
+		}
+
+		@media (min-width: $desktop) {
+			position: absolute;
+			top: 50%;
+			left: 40px;
+			transform: translateY(-50%);
+			width: 570px;
+			z-index: 1;
+		}
+	}
+
+	&__title {
+		width: 125px;
+		margin: 0;
+		font-family: Oswald;
+		color: $grey-1;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		text-transform: uppercase;
+
+		@media (min-width: $tablet) {
+			width: 155px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	&__adress {
+		width: 135px;
+		margin: 0;
+		color: $grey-3;
+
+		@media (min-width: $tablet) {
+			width: 155px;
+		}
+	}
+
+	&__interactive {
+		position: relative;
+		background-color: $grey-8;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__pin {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 25%;
+
+		@media (min-width: $tablet) {
+			width: 15%;
+		}
+
+		@media (min-width: $desktop) {
+			left: 73.5%;
+			top: 53.5%;
+			width: 6%;
+		}
+	}
+}

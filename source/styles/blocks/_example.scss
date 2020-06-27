@@ -1,17 +1,16 @@
 .example {
 	padding-top: $phones-paddings;
-	padding-bottom: $phones-paddings;
+	padding-bottom: 35px;
 	background-color: $grey-8;
 
 	@media (min-width: $tablet) {
 		padding-top: $tablets-paddings;
-		padding-bottom: $tablets-paddings;
+		padding-bottom: 0;
 		background-color: $white;
 	}
 
 	@media (min-width: $desktop) {
 		padding-top: 0;
-		padding-bottom: 0;
 	}
 
 	&__wrapper {
