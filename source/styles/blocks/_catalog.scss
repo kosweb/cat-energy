@@ -2,10 +2,11 @@
 	&__title {
 		@include main-title;
 		padding: 30px 20px 35px 20px;
-		border-bottom: 1px solid $grey-9;
 	}
 
 	&__list {
+		display: grid;
+		row-gap: 25px;
 		@include reset-list-style;
 	}
 
@@ -14,12 +15,22 @@
 		grid-template-columns: repeat(2, 1fr);
 		padding-left: $phones-paddings;
 		padding-right: $phones-paddings;
+		border-top: 1px solid $grey-9;
+
+		&--all {
+			display: block;
+			text-align: center;
+			background-image: url('../../img/content/icon-plus-mobile.svg');
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+			background-position: center 25px;
+		}
 	}
 
 	&__product-title {
 		margin: 0;
-		margin-top: 25px;
-		margin-bottom: 15px;
+		margin-top: 20px;
+		margin-bottom: 10px;
 		width: 75px;
 		font-family: Oswald;
 		color: $grey-1;
@@ -27,10 +38,20 @@
 		font-size: 16px;
 		line-height: 20px;
 		text-transform: uppercase;
+
+		&--all {
+			width: 100%;
+			margin-top: 80px;
+		}
 	}
 
 	&__product-info {
 		width: 100%;
+
+		&--all {
+			margin: 0;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__product-button {

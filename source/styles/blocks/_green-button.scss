@@ -10,11 +10,25 @@
 	border: none;
 	transition: all 0.2s ease;
 
+
 	&:hover {
 		background-color: $green-2;
 	}
 
 	&:active {
 		color: rgba($color: #ffffff, $alpha: 0.3);
+	}
+
+	&--grey {
+		color: $grey-3;
+		background-color: $grey-8;
+
+		&:hover {
+			background-color: $grey-7;
+		}
+
+		&:active {
+			color: rgba($color: $grey-3, $alpha: 0.3);
+		}
 	}
 }
