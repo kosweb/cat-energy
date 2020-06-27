@@ -1,0 +1,39 @@
+.catalog {
+	&__title {
+		@include main-title;
+		padding: 30px 20px 35px 20px;
+		border-bottom: 1px solid $grey-9;
+	}
+
+	&__list {
+		@include reset-list-style;
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
+	}
+
+	&__product-title {
+		margin: 0;
+		margin-top: 25px;
+		margin-bottom: 15px;
+		width: 75px;
+		font-family: Oswald;
+		color: $grey-1;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+
+	&__product-info {
+		width: 100%;
+	}
+
+	&__product-button {
+		grid-column: 1 / -1;
+	}
+}
