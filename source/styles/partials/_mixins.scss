@@ -64,7 +64,14 @@
 	}
 
 	@media (min-width: $tablet) {
+		padding-left: $tablets-paddings;
+		padding-right: $tablets-paddings;
 		font-size: 36px;
 		line-height: 36px;
+	}
+
+	@media (min-width: $desktop) {
+		padding-left: $desktops-paddings;
+		padding-right: $desktops-paddings;
 	}
 }

@@ -63,10 +63,17 @@
 	&__interactive {
 		position: relative;
 		background-color: $grey-8;
+
+		iframe {
+			width: 100%;
+		}
 	}
 
 	&__img {
-		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 
 	&__pin {
@@ -75,6 +82,7 @@
 		left: 49.5%;
 		transform: translate(-50%, -50%);
 		width: 25%;
+		z-index: -1;
 
 		@media (min-width: $tablet) {
 			width: 15%;
