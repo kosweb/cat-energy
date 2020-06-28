@@ -71,6 +71,9 @@
 	}
 
 	&__button {
+		padding-top: 13px;
+		padding-bottom: 13px;
+
 		@media(max-width: $phone-max) {
 			width: 100%;
 		}

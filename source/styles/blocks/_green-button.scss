@@ -1,9 +1,11 @@
 .green-button {
 	display: block;
-	padding: 13px 25px 13px 25px;
+	padding: 10px 25px 10px 25px;
 	font-family: 'Oswald','Arial',sans-serif;
 	color: $white;
 	background-color: $green;
+	font-size: 16px;
+	line-height: 20px;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
