@@ -11,6 +11,10 @@
 		padding: 30px 20px;
 		background-color: $white;
 
+		&--catalog {
+			background-color: $grey-8;
+		}
+
 		@media (min-width: $tablet) {
 			padding: 70px;
 		}
@@ -22,6 +26,10 @@
 			transform: translateY(-50%);
 			width: 570px;
 			z-index: 1;
+
+			&--catalog {
+				background-color: $white;
+			}
 		}
 	}
 

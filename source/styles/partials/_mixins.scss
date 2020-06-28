@@ -20,9 +20,51 @@
 
 @mixin main-title {
 	margin: 0;
-	font-family: 'Oswald';
+	font-family: Oswald;
 	color: $grey-1;
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: 400;
+}
+
+@mixin sub-title {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
+	font-family: Oswald;
+	color: $grey-1;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 400;
+	background-color: $white;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: -100%;
+		top: calc(1em/2 + 3px);
+		display: block;
+		width: 100vw;
+		height: 3px;
+		background-color: $green;
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: calc(1em/2 + 3px);
+		display: block;
+		width: 100vw;
+		height: 3px;
+		background-color: $green;
+		z-index: -1;
+	}
+
+	@media (min-width: $tablet) {
+		font-size: 36px;
+		line-height: 36px;
+	}
 }

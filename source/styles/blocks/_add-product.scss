@@ -1,0 +1,113 @@
+.add-product {
+	border-top: 1px solid $grey-9;
+
+	&__title {
+		@include sub-title;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	&__wrapper {
+		margin-bottom: 40px;
+		padding: 0 $phones-paddings;
+	}
+
+	&__list {
+		@include reset-list-style;
+	}
+
+	&__item {
+		padding: 15px 0;
+		border-bottom: 1px solid $grey-5;
+
+		&:first-child {
+			border-top: 1px solid $grey-5;
+		}
+	}
+
+	&__item-title {
+		margin: 0;
+		margin-bottom: 15px;
+		font-family: Oswald;
+		color: $grey-2;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	&__info-price {
+		font-weight: 400;
+	}
+
+	&__bonus-link {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 35px;
+		padding-top: 190px;
+		width: 280px;
+		height: 290px;
+		color: $white;
+		text-align: center;
+		text-decoration: none;
+		background-color: $green;
+		background-image: url("../../img/content/gift-photo-mobile@1x.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 65px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+			width: 55px;
+			height: 60px;
+			background-image: url('../../img/content/icon-gift.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		@media (min-resolution: $retina-dpi),
+			(min-resolution: $retina-dppx) {
+				background-image: url("../../img/content/gift-photo-mobile@2x.jpg");
+			}
+
+		@media (min-width: $tablet) {
+			background-image: url("../../img/content/gift-photo-tablet@1x.jpg");
+		}
+
+		@media (min-width: $tablet) and (min-resolution: $retina-dpi),
+			(min-width: $tablet) and (min-resolution: $retina-dppx) {
+			background-image: url("../../img/content/gift-photo-tablet@2x.jpg");
+		}
+
+		@media (min-width: $desktop) {
+			background-image: url("../../img/content/gift-photo-desktop@1x.jpg");
+		}
+
+		@media (min-width: $desktop) and (min-resolution: $retina-dpi),
+			(min-width: $desktop) and (min-resolution: $retina-dppx) {
+			background-image: url("../../img/content/gift-photo-desktop@2x.jpg");
+		}
+	}
+
+	&__bonus-title {
+		margin: 0 auto;
+		width: 160px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+}
