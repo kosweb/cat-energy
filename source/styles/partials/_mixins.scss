@@ -40,28 +40,32 @@
 	font-weight: 400;
 	background-color: $white;
 
-	&::before {
-		content: '';
+	&::before,
+	&::after {
+		content: "";
 		position: absolute;
-		left: -100%;
-		top: calc(1em/2 + 3px);
 		display: block;
+		top: 0;
 		width: 100vw;
 		height: 3px;
+		margin-top: calc(1em / 2 + 3px);
 		background-color: $green;
 		z-index: -1;
 	}
 
-	&::after {
-		content: '';
-		position: absolute;
-		top: calc(1em/2 + 3px);
-		display: block;
-		width: 100vw;
-		height: 3px;
-		background-color: $green;
-		z-index: -1;
+	&::before {
+		display: none;
+
+		@media (max-width: $tablet-max) {
+			display: block;
+			right: 100%;
+		}
 	}
+
+	&::after {
+		left: 0;
+	}
+
 
 	@media (min-width: $tablet) {
 		padding-left: $tablets-paddings;
