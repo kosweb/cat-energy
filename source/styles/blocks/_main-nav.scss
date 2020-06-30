@@ -95,26 +95,24 @@
 			&-current::after {
 				background-color: $white;
 			}
-		}
-	}
-}
 
-.page-header--catalog {
-	.main-nav {
-		@media (min-width: $desktop) {
-			&__link {
-				color: $grey-1;
+			&--other-page {
+				@media (min-width: $desktop) {
+					&__link {
+						color: $grey-1;
 
-				&:hover {
-					color: rgba($color: $grey-1, $alpha: 0.6);
-				}
+						&:hover {
+							color: rgba($color: $grey-1, $alpha: 0.6);
+						}
 
-				&:active {
-					color: rgba($color: $grey-1, $alpha: 0.3);
-				}
+						&:active {
+							color: rgba($color: $grey-1, $alpha: 0.3);
+						}
 
-				&-current::after {
-					background-color: $green;
+						&-current::after {
+							background-color: $green;
+						}
+					}
 				}
 			}
 		}

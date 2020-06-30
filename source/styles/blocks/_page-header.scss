@@ -4,7 +4,8 @@
 	padding-right: $phones-paddings;
 
 	@media (max-width: $phone-max) {
-		&--catalog {
+		&--catalog,
+		&--form {
 			border-bottom: 1px solid $grey-9;
 		}
 	}
