@@ -1,32 +1,37 @@
 .index-intro {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	text-align: center;
 
 	@media (min-width: $tablet) {
-		align-items: flex-start;
 		position: relative;
-
-		&__img {
-			margin-left: -25px;
-
-			@media (min-width: $desktop) {
-				margin-left: 0;
-				position: absolute;
-				top: 30px;
-				left: 50%;
-				margin-left: -160px;
-			}
-		}
+		min-height: 870px;
+		padding-left: calc(90 / 768 * 100%);
 	}
 
 	@media (min-width: $desktop) {
 		min-height: 585px;
+		padding-left: calc(85 / 1300 * 100%);
+	}
+
+	&__img {
+
+		@media (min-width: $tablet) {
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			bottom: 0;
+		}
+
+		@media (min-width: $desktop) {
+			margin-left: 0;
+			position: absolute;
+			top: calc(50% - 500px / 2);
+			left: 50%;
+			margin-left: -160px;
+		}
 	}
 
 	&__title {
 		@include main-title;
-		width: 250px;
 		margin-bottom: 20px;
 		text-align: center;
 		margin-top: 30px;
@@ -36,9 +41,8 @@
 		}
 
 		@media (min-width: $tablet) {
-			width: 415px;
+			width: 80%;
 			margin-top: 60px;
-			margin-left: 90px;
 			margin-bottom: 35px;
 			font-size: 60px;
 			line-height: 60px;
@@ -46,46 +50,35 @@
 		}
 
 		@media (min-width: $desktop) {
-			margin-left: 85px;
+			width: 40%;
 		}
 	}
 
 	&__description {
-		font-family: 'Oswald';
+		font-family: Oswald;
 		margin: 0;
 		margin-bottom: 25px;
 		color: $white;
-		text-align: center;
 		text-transform: uppercase;
 
 		@media (min-width: $tablet) {
 			color: $grey-1;
-			margin-left: 90px;
 			margin-bottom: 20px;
 			font-size: 20px;
-		}
-
-		@media (min-width: $desktop) {
-			margin-left: 85px;
+			text-align: left;
+			margin-bottom: 50px;
 		}
 	}
 
 	&__button {
+		width: 100%;
+		margin: 0 auto;
 		padding-top: 13px;
 		padding-bottom: 13px;
 
-		@media(max-width: $phone-max) {
-			width: 100%;
-		}
-
 		@media (min-width: $tablet) {
-			position: absolute;
-			top: 280px;
-			left: 90px;
-		}
-
-		@media (min-width: $desktop) {
-			left: 85px;
+			width: auto;
+			margin: 0;
 		}
 	}
 }

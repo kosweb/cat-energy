@@ -3,17 +3,10 @@
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
 
-	@media (max-width: $phone-max) {
-		&--catalog,
-		&--form {
-			border-bottom: 1px solid $grey-9;
-		}
-	}
-
 	@media (min-width: $tablet) {
 		display: grid;
-		grid-template-columns: 173px 1fr;
-		grid-template-rows: repeat(2, auto);
+		grid-template-columns: 175px 1fr;
+		align-items: top;
 		padding-top: 25px;
 		padding-left: $tablets-paddings;
 		padding-right: $tablets-paddings;
@@ -24,7 +17,7 @@
 	}
 
 	@media (min-width: $desktop) {
-		grid-template-columns: 202px 1fr;
+		grid-template-columns: 205px 1fr;
 		padding-top: 55px;
 		padding-left: $desktops-paddings;
 		padding-right: $desktops-paddings;
@@ -87,10 +80,12 @@
 		align-items: center;
 
 		@media (max-width: $phone-max) {
-			height: 65px;
+			min-height: 65px;
 		}
+
 		@media (min-width: $tablet) {
 			display: block;
+			min-height: 58px;
 		}
 	}
 

@@ -28,9 +28,9 @@ $tablet: 768px;
 $tablet-max: 1299px;
 $desktop: 1300px;
 
-$phones-paddings: 20px;
-$tablets-paddings: 30px;
-$desktops-paddings: 40px;
+$phones-paddings: calc(20 / 320 * 100%);
+$tablets-paddings: calc(30 / 768 * 100%);
+$desktops-paddings: calc(40 / 1300 * 100%);
 
 /* retina */
 $retina-dpi: 144dpi;

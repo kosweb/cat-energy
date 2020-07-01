@@ -1,19 +1,22 @@
 .programs {
 	display: grid;
 	grid-gap: 20px;
-	padding: $phones-paddings;
+	padding-top: 20px;
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
+	padding-bottom: 20px;
 
 	@media (min-width: $tablet) {
 		grid-gap: 30px;
 		padding-top: 0;
 		padding-left: $tablets-paddings;
 		padding-right: $tablets-paddings;
-		padding-bottom: $tablets-paddings;
+		padding-bottom: 30px;
 	}
 
 	@media (min-width: $desktop) {
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 80px;
+		grid-column-gap: calc(80 / 1220 * 100%);
 		padding-top: 80px;
 		padding-left: $desktops-paddings;
 		padding-right: $desktops-paddings;
@@ -27,11 +30,17 @@
 		background-color: $grey-8;
 
 		@media (min-width: $tablet) {
-			padding: 80px 285px 60px 50px;
+			padding-top: 80px;
+			padding-right: calc(285 / 708 * 100%);
+			padding-bottom: 60px;
+			padding-left: calc(50 / 708 * 100%);
 		}
 
 		@media (min-width: $desktop) {
-			padding: 50px 50px 60px 50px;
+			padding-top: 50px;
+			padding-right: calc(50 / 570 * 100%);
+			padding-bottom: 60px;
+			padding-left: calc(50 / 570 * 100%);
 		}
 	}
 
@@ -39,10 +48,10 @@
 		position: relative;
 		margin: 0;
 		margin-bottom: 23px;
-		padding-left: 70px;
+		padding-left: 75px;
 		padding-top: 13px;
 		padding-bottom: 13px;
-		font-family: 'Oswald';
+		font-family: Oswald;
 		color: $grey-1;
 		font-size: 24px;
 		line-height: 24px;
@@ -73,7 +82,7 @@
 		}
 
 		@media (min-width: $desktop) {
-			padding-left: 165px;
+			padding-left: calc(165 / 570 * 100%);
 			padding-top: 32px;
 			padding-bottom: 32px;
 			margin-bottom: 40px;
@@ -98,7 +107,7 @@
 			border-bottom: none;
 			margin-bottom: 30px;
 			padding-bottom: 25px;
-			padding-right: 30px;
+			padding-right: calc(30 / 708 * 100%);
 		}
 
 		@media (min-width: $desktop) {
@@ -111,8 +120,8 @@
 	&__link {
 		align-self: flex-start;
 		position: relative;
-		padding-right: 40px;
-		font-family: 'Oswald';
+		padding-right: calc(40 / 245 * 100%);
+		font-family: Oswald, Arial, sans-serif;
 		font-size: 16px;
 		line-height: 16px;
 		color: $grey-1;
@@ -121,7 +130,13 @@
 		transition: all 0.2s ease;
 
 		@media (min-width: $tablet) {
-			padding-right: 50px;
+			padding-right: calc(50 / 373 * 100%);
+			font-size: 20px;
+			line-height: 20px;
+		}
+
+		@media (min-width: $desktop) {
+			padding-right: calc(50 / 470 * 100%);
 			font-size: 20px;
 			line-height: 20px;
 		}
@@ -130,8 +145,7 @@
 			content: '';
 			position: absolute;
 			display: block;
-			top: 50%;
-			transform: translateY(-50%);
+			top: calc(50% - 11px / 2);
 			right: 9px;
 			width: 23px;
 			height: 11px;
@@ -185,28 +199,23 @@
 		@media (min-width: $tablet) {
 			position: relative;
 
-			&::before {
+			&::before,
+			&::after {
 				content: '';
 				position: absolute;
 				display: block;
-				top: 50%;
-				transform: translateY(-50%);
+				top: calc(50% - 200px / 2);
 				right: 60px;
 				width: 200px;
 				height: 200px;
+			}
+
+			&::before {
 				background-color: $green;
 				border-radius: 50%;
 			}
 
 			&::after {
-				content: '';
-				position: absolute;
-				display: block;
-				top: 50%;
-				transform: translateY(-50%);
-				right: 60px;
-				width: 200px;
-				height: 200px;
 				background-image: url('../../img/content/icon-cat-slim.svg');
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -229,8 +238,7 @@
 				content: '';
 				position: absolute;
 				display: block;
-				top: 50%;
-				transform: translateY(-50%);
+				top: calc(50% - 28px / 2);
 				left: -10px;
 				width: 67px;
 				height: 28px;
@@ -257,12 +265,15 @@
 		@media (min-width: $tablet) {
 			position: relative;
 
-			&::before {
+			&::before,
+			&::after {
 				content: '';
 				position: absolute;
 				display: block;
-				top: 50%;
-				transform: translateY(-50%);
+			}
+
+			&::before {
+				top: calc(50% - 200px / 2);
 				right: 60px;
 				width: 200px;
 				height: 200px;
@@ -271,11 +282,7 @@
 			}
 
 			&::after {
-				content: '';
-				position: absolute;
-				display: block;
-				top: 50%;
-				transform: translateY(-50%);
+				top: calc(50% - 112px / 2);
 				right: 30px;
 				width: 268px;
 				height: 112px;

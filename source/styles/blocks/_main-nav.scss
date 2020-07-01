@@ -5,11 +5,21 @@
 		display: grid;
 	}
 
+	@media (max-width: $phone-max) {
+		&__item {
+			border-bottom: 1px solid $grey-9;
+
+			&:first-child {
+				border-top: 1px solid $grey-9;
+			}
+		}
+	}
+
 	&__link {
 		display: block;
 		padding-top: 24px;
 		padding-bottom: 24px;
-		font-family: 'Oswald';
+		font-family: Oswald, Arial, sans-serif;
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 20px;
@@ -17,16 +27,8 @@
 		color: $black;
 		text-transform: uppercase;
 		text-decoration: none;
-		border-bottom: 1px solid $grey-9;
 		background-color: $white;
-
-		&:first-child {
-			border-top: 1px solid $grey-9;
-		}
-
-		&:last-child {
-			border-bottom: none;
-		}
+		cursor: pointer;
 	}
 
 	&--opened {
@@ -34,16 +36,23 @@
 	}
 
 	@media (min-width: $tablet) {
-		align-self: center;
 
 		&__list {
 			display: flex;
 			justify-content: flex-end;
+			flex-wrap: wrap;
 		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			margin-left: calc(35 / 530 * 100%);
+			min-height: 58px;
+		}
+
 
 		&__link {
 			position: relative;
-			margin-left: 35px;
 			padding-top: 13px;
 			padding-bottom: 10px;
 			color: $grey-2;
@@ -98,20 +107,18 @@
 
 			&--other-page {
 				@media (min-width: $desktop) {
-					&__link {
-						color: $grey-1;
+					color: $grey-1;
 
-						&:hover {
-							color: rgba($color: $grey-1, $alpha: 0.6);
-						}
+					&:hover {
+						color: rgba($color: $grey-1, $alpha: 0.6);
+					}
 
-						&:active {
-							color: rgba($color: $grey-1, $alpha: 0.3);
-						}
+					&:active {
+						color: rgba($color: $grey-1, $alpha: 0.3);
+					}
 
-						&-current::after {
-							background-color: $green;
-						}
+					&-current::after {
+						background-color: $green;
 					}
 				}
 			}

@@ -2,12 +2,23 @@
 	&__list {
 		@include reset-list-style;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		margin: 0 auto;
-		width: 128px;
 		padding-top: $phones-paddings;
 		padding-bottom: $phones-paddings;
+	}
+
+	&__item {
+		margin-right: calc(37 / 280 * 100%);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media (min-width: $tablet) {
+			margin-right: calc(28 / 236 * 100%);
+		}
 	}
 
 	&__link {
