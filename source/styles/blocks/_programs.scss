@@ -17,6 +17,7 @@
 	@media (min-width: $desktop) {
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: calc(80 / 1220 * 100%);
+		grid-template-columns: repeat(auto-fit, minmax(570px, 1fr));
 		padding-top: 80px;
 		padding-left: $desktops-paddings;
 		padding-right: $desktops-paddings;

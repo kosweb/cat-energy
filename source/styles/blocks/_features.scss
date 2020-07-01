@@ -37,15 +37,18 @@
 		@include reset-list-style;
 
 		@media (min-width: $tablet) {
-			grid-template-columns: 1fr 1fr;
+			// grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(auto-fit, minmax(210px, 2fr));
 			grid-column-gap: calc(185 / 708 * 100%);
+			padding-right: calc(85 / 708 * 100%);
 			grid-row-gap: 85px;
+
 			counter-reset: item_number;
 		}
 
 		@media (min-width: $desktop) {
-			grid-template-columns: repeat(4, 1fr);
 			grid-column-gap: calc(85 / 1220 * 100%);
+			padding-right: 0;
 		}
 	}
 
