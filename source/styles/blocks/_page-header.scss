@@ -6,7 +6,6 @@
 	@media (min-width: $tablet) {
 		display: grid;
 		grid-template-columns: 175px 1fr;
-		align-items: top;
 		padding-top: 25px;
 		padding-left: $tablets-paddings;
 		padding-right: $tablets-paddings;

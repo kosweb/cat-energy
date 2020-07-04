@@ -28,3 +28,22 @@ img {
 .visually-hidden {
   @include visually-hidden;
 }
+
+.container {
+	max-width: 2060px;
+	margin: 0 auto;
+}
+
+.main-title {
+	margin: 0;
+	font-family: Oswald;
+	color: $grey-1;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: 400;
+
+	@media (min-width: $tablet) {
+		font-size: 60px;
+		line-height: 64px;
+	}
+}

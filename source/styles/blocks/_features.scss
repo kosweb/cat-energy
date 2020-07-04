@@ -1,17 +1,28 @@
 .features {
-	padding: $phones-paddings;
+	margin-bottom: 40px;
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
 
 	@media (min-width: $tablet) {
-		padding: $tablets-paddings;
-		padding-bottom: 50px;
+		margin-bottom: 100px;
+		padding-left: $tablets-paddings;
+		padding-right: $tablets-paddings;
 	}
 
 	@media (min-width: $desktop) {
-		padding: $desktops-paddings;
+		margin-bottom: 90px;
+		padding-left: $desktops-paddings;
+		padding-right: $desktops-paddings;
 	}
 
 	@media (min-width: $tablet) and (max-width: $tablet-max) {
-		&__decore-line {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -50px;
 			width: 100%;
 			height: 1px;
 			background-color: $grey-9;
@@ -19,13 +30,10 @@
 	}
 
 	&__title {
-		@include main-title;
-		margin-bottom: 35px;
+		margin-bottom: 30px;
 
 		@media (min-width: $tablet) {
-			font-size: 60px;
-			line-height: 60px;
-			margin-bottom: 60px;
+			margin-bottom: 55px;
 		}
 	}
 
@@ -37,8 +45,8 @@
 		@include reset-list-style;
 
 		@media (min-width: $tablet) {
-			// grid-template-columns: 1fr 1fr;
-			grid-template-columns: repeat(auto-fit, minmax(210px, 2fr));
+				// grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 			grid-column-gap: calc(185 / 708 * 100%);
 			padding-right: calc(85 / 708 * 100%);
 			grid-row-gap: 85px;

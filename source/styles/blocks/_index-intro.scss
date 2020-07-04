@@ -1,14 +1,17 @@
 .index-intro {
 	text-align: center;
+	margin-bottom: 20px;
 
 	@media (min-width: $tablet) {
 		position: relative;
 		min-height: 870px;
+		margin-bottom: 0;
 		padding-left: calc(90 / 768 * 100%);
 	}
 
 	@media (min-width: $desktop) {
-		min-height: 585px;
+		min-height: 525px;
+		margin-bottom: 80px;
 		padding-left: calc(85 / 1300 * 100%);
 	}
 
@@ -31,7 +34,6 @@
 	}
 
 	&__title {
-		@include main-title;
 		margin-bottom: 20px;
 		text-align: center;
 		margin-top: 30px;
@@ -44,8 +46,6 @@
 			width: 80%;
 			margin-top: 60px;
 			margin-bottom: 35px;
-			font-size: 60px;
-			line-height: 60px;
 			text-align: left;
 		}
 

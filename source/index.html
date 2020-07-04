@@ -38,26 +38,28 @@
 				</ul>
 			</nav>
 
-			<div class="page-header__intro index-intro">
-				<h1 class="index-intro__title">Функциональное питание для котов</h1>
-				<p class="index-intro__description">
-					Занялся собой? Займись котом!
-				</p>
-				<picture>
-					<source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/index-can-desktop@1x.webp, ./img/content/index-can-desktop@2x.webp 2x">
-					<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/index-can-tablet@1x.webp, ./img/content/index-can-tablet@2x.webp 2x">
-					<source type="image/webp" srcset="./img/content/index-can-mobile@1x.webp, ./img/content/index-can-mobile@2x.webp 2x">
+			<div class="page-header__intro">
+				<div class="index-intro container">
+					<h1 class="index-intro__title main-title">Функциональное питание для котов</h1>
+					<p class="index-intro__description">
+						Занялся собой? Займись котом!
+					</p>
+					<picture>
+						<source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/index-can-desktop@1x.webp, ./img/content/index-can-desktop@2x.webp 2x">
+						<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/index-can-tablet@1x.webp, ./img/content/index-can-tablet@2x.webp 2x">
+						<source type="image/webp" srcset="./img/content/index-can-mobile@1x.webp, ./img/content/index-can-mobile@2x.webp 2x">
 
-					<source media="(min-width: 1300px)" srcset="./img/content/index-can-desktop@1x.png, ./img/content/index-can-desktop@2x.png 2x">
-					<source media="(min-width: 768px)" srcset="./img/content/index-can-tablet@1x.jpg, ./img/content/index-can-tablet@2x.jpg 2x">
-					<img class="index-intro__img" src="./img/content/index-can-mobile@1x.png" srcset="./img/content/index-can-mobile@2x.png 2x" alt="Корм для кошек Cat Energy Pro">
-				</picture>
-				<button class="index-intro__button green-button">Подобрать программу</button>
+						<source media="(min-width: 1300px)" srcset="./img/content/index-can-desktop@1x.png, ./img/content/index-can-desktop@2x.png 2x">
+						<source media="(min-width: 768px)" srcset="./img/content/index-can-tablet@1x.jpg, ./img/content/index-can-tablet@2x.jpg 2x">
+						<img class="index-intro__img" src="./img/content/index-can-mobile@1x.png" srcset="./img/content/index-can-mobile@2x.png 2x" alt="Корм для кошек Cat Energy Pro">
+					</picture>
+					<button class="index-intro__button green-button">Подобрать программу</button>
+				</div>
 			</div>
 		</header>
 
 		<main>
-			<section class="programs">
+			<section class="programs container">
 				<h2 class="visually-hidden">Программы питания</h2>
 				<div class="programs__block programs__block--slim">
 					<h3 class="programs__title">Похудение</h3>
@@ -73,8 +75,8 @@
 				</div>
 			</section>
 
-			<section class="features">
-				<h2 class="features__title">Как это работает</h2>
+			<section class="features container">
+				<h2 class="features__title main-title">Как это работает</h2>
 				<ul class="features__list">
 					<li class="features__item features__item--health">
 						<p class="features__description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -90,12 +92,11 @@
 					</li>
 				</ul>
 			</section>
-			<div class="features__decore-line"></div>
 
 			<section class="example">
-				<div class="example__wrapper">
+				<div class="example__wrapper container">
 					<div class="example__block example__block-about">
-						<h2 class="example__title">Живой пример</h2>
+						<h2 class="example__title main-title">Живой пример</h2>
 						<p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
 							Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 						<div class="example__stats-costs">
@@ -120,7 +121,6 @@
 							<picture>
 								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
 								<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
-
 								<source media="(min-width: 768px)" srcset="./img/content/before@1x.png, ./img/content/before@2x.png 2x">
 								<img class="example__img" src="./img/content/before-mobile@1x.png" srcset="./img/content/before-mobile@2x.png 2x" alt="До">
 							</picture>
@@ -129,20 +129,19 @@
 							<picture>
 								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/after@1x.webp, ./img/content/after@2x.webp 2x">
 								<source type="image/webp" srcset="./img/content/after-mobile@1x.webp, ./img/content/after-mobile@2x.webp 2x">
-
 								<source media="(min-width: 768px)" srcset="./img/content/after@1x.png, ./img/content/after@2x.png 2x">
 								<img class="example__img" src="./img/content/after-mobile@1x.png" srcset="./img/content/after-mobile@2x.png 2x" alt="После">
 							</picture>
 						</div>
-						<div class="example__toggles">
-							<input class="visually-hidden" id="before" type="radio" checked>
-							<label for="before" class="example__option example__option--checked">Было</label>
-							<div class="example__range">
-								<div class="example__range-option"></div>
-							</div>
-							<input class="visually-hidden" id="after" type="radio">
-							<label for="after" class="example__option">Стало</label>
+					</div>
+					<div class="example__toggles">
+						<input class="visually-hidden" id="before" type="radio" name="radio" checked>
+						<label for="before" class="example__option example__option--before">Было</label>
+						<div class="example__range">
+							<input type="range" min="1" max="100" value="50" class="example__range-slider">
 						</div>
+						<input class="visually-hidden" id="after" type="radio" name="radio">
+						<label for="after" class="example__option example__option--after">Стало</label>
 					</div>
 				</div>
 			</section>
@@ -150,7 +149,7 @@
 
 		<footer class="page-footer page-footer--index">
 			<section class="page-footer__map map">
-				<h2 class="map__title">Приглашаем к сотрудничеству дилеров!</h2>
+				<h2 class="map__title main-title container">Приглашаем к сотрудничеству дилеров!</h2>
 				<div class="map__interactive">
 					<picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/bg-map-desktop@1x.webp, ./img/content/bg-map-desktop@2x.webp 2x">

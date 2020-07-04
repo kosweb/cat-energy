@@ -1,24 +1,22 @@
 .programs {
 	display: grid;
 	grid-gap: 20px;
-	padding-top: 20px;
+	margin-bottom: 30px;
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
-	padding-bottom: 20px;
 
 	@media (min-width: $tablet) {
 		grid-gap: 30px;
-		padding-top: 0;
+		margin-bottom: 50px;
 		padding-left: $tablets-paddings;
 		padding-right: $tablets-paddings;
-		padding-bottom: 30px;
 	}
 
 	@media (min-width: $desktop) {
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: calc(80 / 1220 * 100%);
 		grid-template-columns: repeat(auto-fit, minmax(570px, 1fr));
-		padding-top: 80px;
+		margin-bottom: 80px;
 		padding-left: $desktops-paddings;
 		padding-right: $desktops-paddings;
 	}

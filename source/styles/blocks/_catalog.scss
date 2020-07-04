@@ -1,7 +1,6 @@
 .catalog {
 
 	&__title {
-		@include main-title;
 		padding: 30px 20px 35px 20px;
 
 		@media (min-width: $tablet) {

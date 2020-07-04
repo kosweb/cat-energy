@@ -18,15 +18,6 @@
 	list-style: none;
 }
 
-@mixin main-title {
-	margin: 0;
-	font-family: Oswald;
-	color: $grey-1;
-	font-size: 36px;
-	line-height: 36px;
-	font-weight: 400;
-}
-
 @mixin sub-title {
 	position: relative;
 	display: inline-block;
