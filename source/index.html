@@ -117,28 +117,30 @@
 						</div>
 					</div>
 					<div class="example__block example__block-cats">
-						<div class="example__before example__cat--show">
-							<picture>
-								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
-								<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
-								<source media="(min-width: 768px)" srcset="./img/content/before@1x.png, ./img/content/before@2x.png 2x">
-								<img class="example__img" src="./img/content/before-mobile@1x.png" srcset="./img/content/before-mobile@2x.png 2x" alt="До">
-							</picture>
-						</div>
-						<div class="example__after">
-							<picture>
-								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/after@1x.webp, ./img/content/after@2x.webp 2x">
-								<source type="image/webp" srcset="./img/content/after-mobile@1x.webp, ./img/content/after-mobile@2x.webp 2x">
-								<source media="(min-width: 768px)" srcset="./img/content/after@1x.png, ./img/content/after@2x.png 2x">
-								<img class="example__img" src="./img/content/after-mobile@1x.png" srcset="./img/content/after-mobile@2x.png 2x" alt="После">
-							</picture>
+						<div class="example__cats-wrapper">
+							<div class="example__before example__cat--show">
+								<picture>
+									<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
+									<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
+									<source media="(min-width: 768px)" srcset="./img/content/before@1x.png, ./img/content/before@2x.png 2x">
+									<img class="example__img" src="./img/content/before-mobile@1x.png" srcset="./img/content/before-mobile@2x.png 2x" alt="До">
+								</picture>
+							</div>
+							<div class="example__after">
+								<picture>
+									<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/after@1x.webp, ./img/content/after@2x.webp 2x">
+									<source type="image/webp" srcset="./img/content/after-mobile@1x.webp, ./img/content/after-mobile@2x.webp 2x">
+									<source media="(min-width: 768px)" srcset="./img/content/after@1x.png, ./img/content/after@2x.png 2x">
+									<img class="example__img" src="./img/content/after-mobile@1x.png" srcset="./img/content/after-mobile@2x.png 2x" alt="После">
+								</picture>
+							</div>
 						</div>
 					</div>
 					<div class="example__toggles">
 						<input class="visually-hidden" id="before" type="radio" name="radio" checked>
 						<label for="before" class="example__option example__option--before">Было</label>
 						<div class="example__range">
-							<input type="range" min="1" max="100" value="50" class="example__range-slider">
+							<input type="range" min="0" max="100" value="50" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
 						</div>
 						<input class="visually-hidden" id="after" type="radio" name="radio">
 						<label for="after" class="example__option example__option--after">Стало</label>
@@ -150,7 +152,7 @@
 		<footer class="page-footer page-footer--index">
 			<div class="page-footer__header">
 				<h2 class="page-footer__title">Приглашаем к сотрудничеству дилеров!</h2>
-				<p class="page-footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+				<p class="page-footer__adress">ул. Большая Конюшенная, д. 19/8<br><br> Санкт-Петербург</p>
 			</div>
 
 			<section class="page-footer__map map">

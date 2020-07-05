@@ -16,3 +16,7 @@ buttonAfter.addEventListener('click', function(evt) {
 		catAfter.classList.add('example__cat--show');
 	}
 });
+
+function rangeSlider(value) {
+	document.querySelector('.example__before').style.width = +value+"%";
+};

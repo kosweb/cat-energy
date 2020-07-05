@@ -1,5 +1,74 @@
 .page-footer {
+	position: relative;
 	background-color: $grey-8;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 25px;
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
+		padding-bottom: 20px;
+		background-color: $white;
+
+		@media (min-width: $tablet) {
+			padding-top: 65px;
+			padding-left: calc(70 / 768 * 100%);
+			padding-right: calc(70 / 768 * 100%);
+			padding-bottom: 60px;
+		}
+
+		@media (min-width: $desktop) {
+			position: absolute;
+			z-index: 1;
+			top: 95px;
+			left: 110px;
+			width: 570px;
+			padding-left: 75px;
+			padding-right: 90px;
+		}
+	}
+
+	&__title {
+		width: 125px;
+		margin: 0;
+		font-family: Oswald, Arial, sans-serif;
+		color: $grey-1;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		@media (min-width: $tablet) {
+			width: 155px;
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+
+	&__adress {
+		width: 135px;
+		margin: 0;
+		line-height: 20px;
+
+		br {
+			display: none;
+		}
+
+		@media (min-width: $tablet) {
+			width: 155px;
+			text-align: right;
+
+			br {
+				display: block;
+			}
+		}
+
+		@media (min-width: $desktop) {
+			text-align: left;
+		}
+	}
 
 	&__bottom {
 		padding-left: $phones-paddings;
