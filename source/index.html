@@ -134,16 +134,16 @@
 									<img class="example__img" src="./img/content/after-mobile@1x.png" srcset="./img/content/after-mobile@2x.png 2x" alt="После">
 								</picture>
 							</div>
+							<div class="example__toggles">
+								<input class="visually-hidden" id="before" type="radio" name="radio" checked>
+								<label for="before" class="example__option example__option--before"><span>Было</span></label>
+								<div class="example__range">
+									<input type="range" min="0" max="100" value="50" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
+								</div>
+								<input class="visually-hidden" id="after" type="radio" name="radio">
+								<label for="after" class="example__option example__option--after"><span>Стало</span></label>
+							</div>
 						</div>
-					</div>
-					<div class="example__toggles">
-						<input class="visually-hidden" id="before" type="radio" name="radio" checked>
-						<label for="before" class="example__option example__option--before">Было</label>
-						<div class="example__range">
-							<input type="range" min="0" max="100" value="50" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
-						</div>
-						<input class="visually-hidden" id="after" type="radio" name="radio">
-						<label for="after" class="example__option example__option--after">Стало</label>
 					</div>
 				</div>
 			</section>

@@ -4,7 +4,7 @@
 
 	@media (min-width: $tablet) {
 		position: relative;
-		min-height: 870px;
+		min-height: 820px;
 		margin-bottom: 0;
 		padding-left: calc(90 / 768 * 100%);
 	}
@@ -27,9 +27,9 @@
 		@media (min-width: $desktop) {
 			margin-left: 0;
 			position: absolute;
-			top: calc(50% - 500px / 2);
+			top: 0;
 			left: 50%;
-			margin-left: -160px;
+			margin-left: -155px;
 		}
 	}
 

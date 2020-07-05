@@ -5,24 +5,37 @@
 	}
 
 	@media (min-width: $tablet) {
-		min-height: 1002px;
 		background-image: linear-gradient(to bottom, $white 60%, transparent 50%);
+	}
+
+	@media (min-width: $desktop) {
+			background-image: linear-gradient(to bottom, $white 25%, transparent 25%),
+											  linear-gradient(to right, $grey-8 70%, $grey-11 70%);
 	}
 
 	&__wrapper {
 		padding-top: 30px;
 		padding-bottom: 35px;
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
 
 		@media (min-width: $tablet) {
 			position: relative;
 			padding-top: 0;
 			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+
+			@media (min-width: $desktop) {
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+				padding-left: $desktops-paddings;
+				padding-right: $desktops-paddings;
+			}
 		}
 	}
 
 	&__block-about {
-		padding-left: $phones-paddings;
-		padding-right: $phones-paddings;
 
 		@media (min-width: $tablet) {
 			padding-left: $tablets-paddings;
@@ -30,8 +43,8 @@
 		}
 
 		@media (min-width: $desktop) {
-			padding-left: $desktops-paddings;
-			padding-right: $desktops-paddings;
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
@@ -40,6 +53,10 @@
 
 		@media (min-width: $tablet) {
 			margin-bottom: 55px;
+		}
+
+		@media (min-width: $desktop) {
+			margin-bottom: 140px;
 		}
 	}
 
@@ -76,7 +93,8 @@
 		padding-bottom: 10px;
 
 		@media (min-width: $desktop) {
-			padding-bottom: 50px;
+			margin-bottom: 50px;
+			justify-content: flex-start;
 		}
 	}
 
@@ -157,7 +175,7 @@
 	&__costs {
 		margin: 0;
 		margin-bottom: 35px;
-		font-family: Oswald;
+		font-family: Oswald, Arial, sans-serif;
 		color: $grey-1;
 		font-size: 14px;
 		line-height: 20px;
@@ -177,9 +195,12 @@
 
 		@media (min-width: $desktop) {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-start;
 			width: 100%;
-			padding-right: 37.5px;
+
+			&-mark {
+				margin-right: calc(70 / 400 * 100%);
+			}
 		}
 	}
 
@@ -188,6 +209,12 @@
 		@media (min-width: $tablet) {
 			background-image: linear-gradient(to bottom, $white 30%, transparent 30%),
 												linear-gradient(to right, $grey-8 50%, $grey-11 50%);
+		}
+
+		@media (min-width: $desktop) {
+			justify-self: right;
+			margin-right: 5%;
+			background-image: none;
 		}
 	}
 
@@ -200,6 +227,10 @@
 			width: 690px;
 			min-height: 635px;
 			margin: 0 auto;
+		}
+
+		@media (min-width: $desktop) {
+			margin-top: -42px;
 		}
 	}
 
@@ -259,15 +290,19 @@
 	&__toggles {
 		display: flex;
 		justify-content: space-between;
-		position: relative;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
 		width: 210px;
 		margin: 0 auto;
 
 		@media (min-width: $tablet) {
 			width: 580px;
 			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
 			bottom: 65px;
-			left: calc(50% - 580px / 2);
 			z-index: 3;
 		}
 
@@ -334,28 +369,32 @@
 		}
 
 		@media (min-width: $tablet) {
-			width: auto;
+			width: 52px;
 			font-size: 20px;
 
-			&::after {
-				content: '';
-				position: absolute;
-				width: 100%;
-				left: 0;
-				bottom: -5px;
-				border-bottom: 1px dashed $grey-13;
-				transition: all 0.2s ease;
-			}
+			span {
+				position: relative;
 
-			&:hover {
 				&::after {
-					border-bottom: 1px solid $grey-14;
+					content: '';
+					position: absolute;
+					width: 100%;
+					left: 0;
+					bottom: -5px;
+					border-bottom: 1px dashed $grey-13;
+					transition: all 0.2s ease;
 				}
-			}
 
-			&:active {
-				&::after {
-					border-bottom: none;
+				&:hover {
+					&::after {
+						border-bottom: 1px solid $grey-14;
+					}
+				}
+
+				&:active {
+					&::after {
+						border-bottom: none;
+					}
 				}
 			}
 		}
@@ -366,10 +405,8 @@
 
 		@media (min-width: $tablet) {
 			display: flex;
-			flex-grow: 1;
+			width: 440px;
 			align-items: center;
-			padding-left: 20px;
-			padding-right: 20px;
 			transform: rotate(180deg);
 
 			&-slider {
