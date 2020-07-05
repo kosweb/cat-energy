@@ -9,12 +9,6 @@
 		padding-right: $tablets-paddings;
 	}
 
-	@media (min-width: $desktop) {
-		margin-bottom: 90px;
-		padding-left: $desktops-paddings;
-		padding-right: $desktops-paddings;
-	}
-
 	@media (min-width: $tablet) and (max-width: $tablet-max) {
 		position: relative;
 
@@ -27,6 +21,12 @@
 			height: 1px;
 			background-color: $grey-9;
 		}
+	}
+
+	@media (min-width: $desktop) {
+		margin-bottom: 90px;
+		padding-left: $desktops-paddings;
+		padding-right: $desktops-paddings;
 	}
 
 	&__title {

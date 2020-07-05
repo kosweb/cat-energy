@@ -8,10 +8,6 @@
 	@media (max-width: $phone-max) {
 		&__item {
 			border-bottom: 1px solid $grey-9;
-
-			&:first-child {
-				border-top: 1px solid $grey-9;
-			}
 		}
 	}
 
@@ -31,10 +27,6 @@
 		cursor: pointer;
 	}
 
-	&--opened {
-		display: block;
-	}
-
 	@media (min-width: $tablet) {
 
 		&__list {
@@ -50,7 +42,6 @@
 			min-height: 58px;
 		}
 
-
 		&__link {
 			position: relative;
 			padding-top: 13px;
@@ -61,11 +52,6 @@
 			font-weight: 400;
 			transition: all 0.2s ease;
 			background-color: transparent;
-
-
-			&:first-child {
-				border-top: none;
-			}
 
 			&:hover {
 				color: rgba($color: $grey-2, $alpha: 0.6);

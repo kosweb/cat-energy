@@ -19,7 +19,7 @@
 				<a class="page-header__logo-text-link">
 					<img class="page-header__logo-text" src="./img/content/logo-text.svg" alt="Cat Energy" width="101" height="18">
 				</a>
-				<button class="page-header__nav-button nav-button--closed" type="button">
+				<button class="page-header__nav-button" type="button">
 					<span class="visually-hidden">Навигация</span>
 				</button>
 			</div>
@@ -117,7 +117,7 @@
 						</div>
 					</div>
 					<div class="example__block example__block-cats">
-						<div class="example__before example__cat-hide">
+						<div class="example__before example__cat--show">
 							<picture>
 								<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
 								<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
@@ -148,8 +148,12 @@
 		</main>
 
 		<footer class="page-footer page-footer--index">
+			<div class="page-footer__header">
+				<h2 class="page-footer__title">Приглашаем к сотрудничеству дилеров!</h2>
+				<p class="page-footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+			</div>
+
 			<section class="page-footer__map map">
-				<h2 class="map__title main-title container">Приглашаем к сотрудничеству дилеров!</h2>
 				<div class="map__interactive">
 					<picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/bg-map-desktop@1x.webp, ./img/content/bg-map-desktop@2x.webp 2x">
@@ -161,7 +165,7 @@
             <img class="map__img" src="./img/content/bg-map-mobile@1x.png" srcset="./img/content/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
 					</picture>
 					<img class="map__pin" src="./img/content/map-pin.png" alt="Пин карты">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
 			</section>
 
@@ -208,6 +212,5 @@
 		</footer>
 
 		<script src="./js/index.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
   </body>
 </html>
