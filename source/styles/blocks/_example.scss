@@ -56,6 +56,7 @@
 		}
 
 		@media (min-width: $desktop) {
+			margin-top: 45px;
 			margin-bottom: 140px;
 		}
 	}
@@ -69,6 +70,7 @@
 		}
 
 		@media (min-width: $desktop) {
+			min-width: 420px;
 			margin-bottom: 70px;
 		}
 	}
@@ -83,17 +85,18 @@
 
 		@media (min-width: $desktop) {
 			display: block;
+			margin-bottom: 75px;
 		}
 	}
 
 	&__stats {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		padding-bottom: 10px;
 
 		@media (min-width: $desktop) {
-			margin-bottom: 50px;
+			margin-bottom: 55px;
 			justify-content: flex-start;
 		}
 	}
@@ -105,7 +108,7 @@
 		align-items: center;
 		margin-right: calc(30 / 280 * 100%);
 		width: 125px;
-		min-height: 55px;
+		min-height: 60px;
 		border: 1px solid $grey-5;
 		border-radius: 4px;
 
@@ -115,6 +118,7 @@
 
 		@media (min-width: $tablet) {
 			width: 165px;
+			margin-right: 45px;
 			min-height: 75px;
 			border-radius: 5px;
 
@@ -133,8 +137,8 @@
 	}
 
 	&__result {
-		font-family: Oswald;
-		font-weight: 500;
+		font-family: Oswald, Arial, sans-serif;
+		font-weight: 400;
 		font-size: 24px;
 		line-height: 24px;
 		color: $grey-1;
@@ -152,8 +156,7 @@
 		width: 85px;
 		top: 100%;
 		left: 50%;
-		margin-top: -12px;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 		padding: 0 5px;
 		font-size: 12px;
 		line-height: 12px;
@@ -167,8 +170,7 @@
 		@media (min-width: $tablet) {
 			font-size: 14px;
 			line-height: 14px;
-			padding: 5px 5px;
-			margin-top: -12px;
+			padding: 0 5px;
 		}
 	}
 
@@ -199,7 +201,7 @@
 			width: 100%;
 
 			&-mark {
-				margin-right: calc(70 / 400 * 100%);
+				margin-right: 75px;
 			}
 		}
 	}
@@ -230,7 +232,7 @@
 		}
 
 		@media (min-width: $desktop) {
-			margin-top: -42px;
+			height: 100%;
 		}
 	}
 
@@ -246,7 +248,7 @@
 
 		@media (min-width: $tablet) {
 			width: 690px;
-			height: 635px;
+			height: 100%;
 			left: 0;
 			opacity: 1;
 			overflow: hidden;
@@ -264,13 +266,27 @@
 				margin-top: 7px;
 			}
 		}
+
+		@media (min-width: $desktop) {
+			background-image: linear-gradient(to bottom, $white 25%, $grey-8 25%);
+
+			.example__img {
+			}
+		}
 	}
 
 	&__after {
 
 		@media (min-width: $tablet) {
+			margin-left: 2px;
 			z-index: 1;
 			background-image: linear-gradient(to bottom, $white 30%, $grey-11 30%);
+		}
+
+		@media (min-width: $desktop) {
+			background-image: linear-gradient(to bottom, $white 25%, $grey-11 25%);
+			.example__img {
+			}
 		}
 	}
 
@@ -302,7 +318,7 @@
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: 65px;
+			bottom: 80px;
 			z-index: 3;
 		}
 

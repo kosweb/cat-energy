@@ -143,13 +143,13 @@
 		&::before {
 			content: '';
 			position: absolute;
-			top: 0;
+			top: calc(50% - 1px);
 			left: 0;
 			width: 25px;
 			height: 2px;
 			background-color: $grey-2;
-			box-shadow: 0 9px 0 0 $grey-2, 0 18px 0 0 $grey-2;
-			transition: all 0.2s ease;
+			box-shadow: 0 9px 0 0 $grey-2, 0 -9px 0 0 $grey-2;
+			transition: box-shadow 0.2s;
 		}
 
 		@media (min-width: $tablet) {
@@ -180,29 +180,12 @@
 .show-navigation {
 	display: block;
 	animation-name: yo_navi;
-	animation-duration: .4s;
+	animation-duration: 0.4s;
 }
 
 .nav-button--open {
 
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 25px;
-		height: 2px;
-		box-shadow: none;
-		background-color: $grey-2;
-		transition: all 0.2s ease;
-	}
-
 	&::before {
-		transform: rotate(365deg, 45deg);
-	}
-
-	&::after {
-		transform: rotate(365deg, -45deg);
+		box-shadow: 0 1px 0 0 transparent, 0 -1px 0 0 transparent;
 	}
 }
