@@ -1,20 +1,6 @@
 .page-header {
-	position: relative;
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
-
-	@media (min-width: $phone) and (max-width: $phone-max) {
-
-		&::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 65px;
-			width: 100%;
-			height: 1px;
-			background-color: $grey-9;
-		}
-	}
 
 	@media (min-width: $tablet) {
 		display: grid;
@@ -36,6 +22,7 @@
 	}
 
 	&--index {
+		margin-top: 85px;
 
 		&::before {
 			content: '';
@@ -60,6 +47,9 @@
 		}
 
 		@media (min-width: $tablet) {
+			margin-top: 0;
+
+
 			&::before {
 				display: none;
 			}
@@ -80,27 +70,34 @@
 
 		@media (min-width: $desktop) and (min-resolution: $retina-dpi),
       (min-width: $desktop) and (min-resolution: $retina-dppx) {
-      &::before {
-        background-image: url("../../img/content/index-background-desktop@2x.jpg"), linear-gradient(to right, $green-3, $green-4);
-      }
+				&::before {
+					background-image: url("../../img/content/index-background-desktop@2x.jpg"), linear-gradient(to right, $green-3, $green-4);
+				}
 		}
 	}
 
 	&__logo-block {
-		position: relative;
+		position: fixed;
+		padding-left: $phones-paddings;
+		padding-right: $phones-paddings;
+		width: 100%;
+		min-height: 65px;
+		top: 0;
+		left: 0;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		align-items: center;
 		z-index: 2;
-		background-color: #fff;
-
-		@media (max-width: $phone-max) {
-			min-height: 65px;
-		}
+		background-color: $white;
+		border-bottom: 1px solid $grey-9;
 
 		@media (min-width: $tablet) {
+			position: static;
 			display: block;
+			padding-left: 0;
+			padding-right: 0;
 			min-height: 58px;
+			border-bottom: none;
 		}
 	}
 
@@ -122,7 +119,11 @@
 	}
 
 	&__logo-text-link {
+		display: flex;
 		justify-self: center;
+		justify-content: center;
+		height: 65px;
+		width: 100%;
 		line-height: 0;
 
 		@media (min-width: $tablet) {
@@ -158,10 +159,10 @@
 	}
 
 	&__nav {
-		position: absolute;
+		position: fixed;
 		z-index: 1;
 		display: none;
-		top: 66px;
+		top: 65px;
 		left: 0;
 		width: 100%;
 

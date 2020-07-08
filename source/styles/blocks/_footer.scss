@@ -171,4 +171,10 @@
 			}
 		}
 	}
+
+	&--catalog {
+		.page-footer__header {
+			background-color: $grey-8;
+		}
+	}
 }

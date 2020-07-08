@@ -25,6 +25,10 @@ img {
   height: auto;
 }
 
+.page-main {
+	overflow-x: hidden;
+}
+
 .visually-hidden {
   @include visually-hidden;
 }
@@ -45,5 +49,56 @@ img {
 	@media (min-width: $tablet) {
 		font-size: 60px;
 		line-height: 64px;
+	}
+}
+
+.sub-title {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding-right: 25px;
+	font-family: Oswald, Arial, sans-serif;
+	color: $grey-1;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 400;
+	background-color: $white;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		width: 100vw;
+		height: 3px;
+		margin-top: calc(1em / 2 + 3px);
+		background-color: $green;
+		z-index: -1;
+	}
+
+	&::before {
+		display: none;
+	}
+
+	&::after {
+		left: 0;
+	}
+
+	@media (min-width: $tablet) {
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 36px;
+		line-height: 36px;
+
+		&::before {
+			display: block;
+			right: 100%;
+			margin-right: 58px;
+		}
+	}
+
+	@media (min-width: $desktop) {
+		padding-left: 0;
 	}
 }
