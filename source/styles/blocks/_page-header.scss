@@ -1,10 +1,12 @@
 .page-header {
+	margin-top: 85px;
 	padding-left: $phones-paddings;
 	padding-right: $phones-paddings;
 
 	@media (min-width: $tablet) {
 		display: grid;
 		grid-template-columns: 175px 1fr;
+		margin-top: 0;
 		padding-top: 25px;
 		padding-left: $tablets-paddings;
 		padding-right: $tablets-paddings;
@@ -22,7 +24,6 @@
 	}
 
 	&--index {
-		margin-top: 85px;
 
 		&::before {
 			content: '';
@@ -47,8 +48,6 @@
 		}
 
 		@media (min-width: $tablet) {
-			margin-top: 0;
-
 
 			&::before {
 				display: none;
@@ -120,7 +119,6 @@
 
 	&__logo-text-link {
 		display: flex;
-		justify-self: center;
 		justify-content: center;
 		height: 65px;
 		width: 100%;

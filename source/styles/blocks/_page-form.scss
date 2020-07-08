@@ -1,0 +1,52 @@
+.page-form {
+	padding-left: $phones-paddings;
+	padding-right: $phones-paddings;
+
+	@media (min-width: $tablet) {
+		padding-left: $tablets-paddings;
+		padding-right: $tablets-paddings;
+	}
+
+	@media (min-width: $desktop) {
+		padding-left: $desktops-paddings;
+		padding-right: $desktops-paddings;
+	}
+
+	&__wrapper {
+		padding-top: 10px;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+
+		@media (min-width: $tablet) {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		@media (min-width: $desktop) {
+			margin-top: 75px;
+		}
+	}
+
+	&__description {
+		margin: 0;
+		margin-bottom: 35px;
+		width: 230px;
+		font-family: Oswald, Arial, sans-serif;
+		color: $grey-1;
+		text-transform: uppercase;
+
+		@media (min-width: $tablet) {
+			margin-bottom: 65px;
+			width: 330px;
+			font-size: 20px;
+			line-height: 30px;
+			margin-left: 40px;
+		}
+
+		@media (min-width: $desktop) {
+			margin-left: 0;
+		}
+	}
+}

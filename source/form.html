@@ -24,27 +24,28 @@
 			</button>
 		</div>
 
-		<nav class="page-header__nav main-nav main-nav--opened">
+		<nav class="page-header__nav main-nav">
 			<ul class="main-nav__list">
 				<li class="main-nav__item">
-					<a class="main-nav__link main-nav__link--other-page" href="index.html">Главная</a>
+					<a class="main-nav__link main-nav__link--other" href="index.html">Главная</a>
 				</li>
 				<li class="main-nav__item">
-					<a class="main-nav__link main-nav__link--other-page" href="catalog.html">Каталог продукции</a>
+					<a class="main-nav__link main-nav__link--other" href="catalog.html">Каталог продукции</a>
 				</li>
 				<li class="main-nav__item">
-					<a class="main-nav__link main-nav__link--other-page main-nav__link-current" href="form.html">Подбор программы</a>
+					<a class="main-nav__link main-nav__link--other main-nav__link--other-current" href="form.html">Подбор программы</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
 
-	<main class="page-main page-main--form">
-		<div class="page-main__title-wrapper">
-			<h1 class="page-main__title">Подбор программы</h1>
-			<p class="page-main__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+	<main class="page-form container">
+		<div class="page-form__wrapper container">
+			<h1 class="page-form__title main-title">Подбор программы</h1>
+			<p class="page-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
 		</div>
-		<form class="page-main__form form" action="#" method="POST">
+
+		<form class="form" action="#" method="POST">
 			<fieldset>
 				<h2 class="visually-hidden">Данные питомца</h2>
 				<div class="form__intro-wrapper">
@@ -86,7 +87,7 @@
 			</fieldset>
 
 			<fieldset>
-				<h2 class="form__title">Контактные данные (владельца кота)</h2>
+				<h2 class="sub-title">Контактные данные (владельца кота)</h2>
 				<div class="form__owner-contacts-wrapper">
 					<div class="form__text-field">
 						<label class="form__text-label" for="email">E-mail:*</label>
@@ -104,12 +105,12 @@
 			</fieldset>
 
 			<fieldset>
-				<h2 class="form-title">Комментарий</h2>
+				<h2 class="sub-title">Комментарий</h2>
 				<textarea name="comment" id="comment" cols="50" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
 			</fieldset>
 
 			<fieldset>
-				<h2 class="form-title">Дополнительно</h2>
+				<h2 class="sub-title">Дополнительно</h2>
 				<div class="form__add-wrapper">
 					<div class="form__add-field">
 						<input class="visually-hidden" id="sugar" name="sugar" type="checkbox" checked>
@@ -134,9 +135,13 @@
 		</form>
 	</main>
 
-	<footer class="page-footer page-form">
+	<footer class="page-footer page-footer--form">
+		<div class="page-footer__header">
+			<h2 class="page-footer__title">Приглашаем к сотрудничеству дилеров!</h2>
+			<p class="page-footer__adress">ул. Большая Конюшенная, д. 19/8<br><br> Санкт-Петербург</p>
+		</div>
+
 		<section class="page-footer__map map">
-			<h2 class="map__title map__title--catalog">Приглашаем к сотрудничеству дилеров!</h2>
 			<div class="map__interactive">
 				<picture>
 					<source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/bg-map-desktop@1x.webp, ./img/content/bg-map-desktop@2x.webp 2x">
@@ -148,7 +153,7 @@
 					<img class="map__img" src="./img/content/bg-map-mobile@1x.png" srcset="./img/content/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
 				</picture>
 				<img class="map__pin" src="./img/content/map-pin.png" alt="Пин карты">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</div>
 		</section>
 
@@ -193,5 +198,7 @@
 			</div>
 		</section>
 	</footer>
+
+	<script src="./js/index.min.js"></script>
 </body>
 </html>

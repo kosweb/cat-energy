@@ -172,7 +172,8 @@
 		}
 	}
 
-	&--catalog {
+	&--catalog,
+	&--form {
 		.page-footer__header {
 			background-color: $grey-8;
 		}

@@ -94,11 +94,14 @@ img {
 		&::before {
 			display: block;
 			right: 100%;
-			margin-right: 58px;
 		}
 	}
 
 	@media (min-width: $desktop) {
 		padding-left: 0;
+
+		&::before {
+			margin-right: 58px;
+		}
 	}
 }
