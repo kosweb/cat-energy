@@ -118,7 +118,7 @@
 					</div>
 					<div class="example__block example__block-cats">
 						<div class="example__cats-wrapper">
-							<div class="example__before example__cat--show">
+							<div id="before-cat" class="example__before example__cat--show">
 								<picture>
 									<source type="image/webp" media="(min-width: 768px)" srcset="./img/content/before@1x.webp, ./img/content/before@2x.webp 2x">
 									<source type="image/webp" srcset="./img/content/before-mobile@1x.webp, ./img/content/before-mobile@2x.webp 2x">
@@ -138,10 +138,10 @@
 								<input class="visually-hidden" id="before" type="radio" name="radio" checked>
 								<label for="before" class="example__option example__option--before"><span>Было</span></label>
 								<div class="example__range">
-									<input type="range" min="0" max="100" value="50" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
+									<input type="range" min="0" max="100" value="50" id="range-slider" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
 								</div>
 								<input class="visually-hidden" id="after" type="radio" name="radio">
-								<label for="after" class="example__option example__option--after"><span>Стало</span></label>
+								<label for="after" id="after-button" class="example__option example__option--after"><span>Стало</span></label>
 							</div>
 						</div>
 					</div>

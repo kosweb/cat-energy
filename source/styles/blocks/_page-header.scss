@@ -131,19 +131,22 @@
 
 	&__nav-button {
 		position: relative;
-		width: 25px;
-		height: 20px;
+		right: -33px;
+		width: 90px;
+		height: 65px;
 		padding: 0;
 		justify-self: end;
 		border: none;
 		background-color: transparent;
 		outline: none;
 
+
 		&::before {
 			content: '';
 			position: absolute;
-			top: calc(50% - 1px);
-			left: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			width: 25px;
 			height: 2px;
 			background-color: $grey-2;

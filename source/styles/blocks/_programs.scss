@@ -117,9 +117,10 @@
 	}
 
 	&__link {
+		display: block;
 		align-self: flex-start;
 		position: relative;
-		padding-right: calc(40 / 245 * 100%);
+		padding-right: 40px;
 		font-family: Oswald, Arial, sans-serif;
 		font-size: 16px;
 		line-height: 16px;
@@ -129,13 +130,7 @@
 		transition: all 0.2s ease;
 
 		@media (min-width: $tablet) {
-			padding-right: calc(50 / 373 * 100%);
-			font-size: 20px;
-			line-height: 20px;
-		}
-
-		@media (min-width: $desktop) {
-			padding-right: calc(50 / 470 * 100%);
+			padding-right: 50px;
 			font-size: 20px;
 			line-height: 20px;
 		}
@@ -144,8 +139,9 @@
 			content: '';
 			position: absolute;
 			display: block;
-			top: calc(50% - 11px / 2);
+			top: 50%;
 			right: 9px;
+			transform: translateY(-50%);
 			width: 23px;
 			height: 11px;
 			background-image: url('../../img/content/icon-right-arrow-verylong.svg');
