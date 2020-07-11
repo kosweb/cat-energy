@@ -176,6 +176,10 @@
 	&--form {
 		.page-footer__header {
 			background-color: $grey-8;
+
+			@media (min-width: $desktop) {
+				background-color: $white;
+			}
 		}
 	}
 }

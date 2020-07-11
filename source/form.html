@@ -20,7 +20,7 @@
 				<img class="page-header__logo-text" src="./img/content/logo-text.svg" alt="Cat Energy" width="101" height="18">
 			</a>
 			<button class="page-header__nav-button nav-button--closed" type="button">
-				<span class="visually-hidden">Навигация</span>
+				<span></span>
 			</button>
 		</div>
 
@@ -39,99 +39,100 @@
 		</nav>
 	</header>
 
-	<main class="page-form container">
+	<main class="page-form">
 		<div class="page-form__wrapper container">
 			<h1 class="page-form__title main-title">Подбор программы</h1>
 			<p class="page-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
 		</div>
 
-		<form class="form" action="#" method="POST">
-			<fieldset>
+		<form class="form container" action="#" method="POST">
+			<fieldset class="form__set form__set--pet">
 				<h2 class="visually-hidden">Данные питомца</h2>
-				<div class="form__intro-wrapper">
-					<div class="form__pet-info-block">
-						<div class="form__text-field">
-							<label class="form__text-label" for="pet-name">Имя:*</label>
-							<div class="form__input-text-wrapper">
-								<input class="form__input-text" id="pet-name" type="text" placeholder="Барсик">
-							</div>
+				<div class="form__pet-info-wrapper">
+					<div class="form__pet-parameters">
+						<div class="form__text-input-wrapper">
+							<label class="form__text-input-label" for="pet-name">Имя:*</label>
+							<input class="form__input-text form__input-text--name" id="pet-name" type="text" placeholder="Барсик">
 						</div>
-						<div class="form__text-fieldd">
-							<label class="form__text-label" for="pet-weight">Вес (кг):*</label>
-							<div class="form__input-text-wrapper">
-								<input class="form__input-text" id="pet-weight" type="text" placeholder="7">
-							</div>
+						<div class="form__text-input-wrapper">
+							<label class="form__text-input-label" for="pet-weight">Вес (кг):*</label>
+							<input class="form__input-text form__input-text--weight" id="pet-weight" type="number" placeholder="7">
 						</div>
-						<div class="form__text-field">
-							<label class="form__text-label" for="pet-age">Возраст (лет):</label>
-							<div class="form__input-text-wrapper">
-								<input class="form__input-text" id="pet-age" type="text" placeholder="7">
-							</div>
+						<div class="form__text-input-wrapper">
+							<label class="form__text-input-label" for="pet-age">Возраст (лет):</label>
+							<input class="form__input-text form__input-text--age" id="pet-age" type="number" placeholder="7">
 						</div>
 					</div>
-					<div class="form__pet-program-block">
-						<div class="form__pet-program">
+					<div class="form__pet-programs">
+						<div class="form__radio-wrapper">
 							<input class="visually-hidden" id="weight-loss" name="radio" type="radio" checked>
-							<label class="form__pet-program-label" for="weight-loss">Похудение</label>
+							<label class="form__radio-input-label" for="weight-loss">Похудение</label>
 						</div>
-						<div class="form__pet-program">
+						<div class="form__radio-wrapper">
 							<input class="visually-hidden" id="weight-add" name="radio" type="radio">
-							<label class="form__pet-program-label" for="weight-add">Набор массы</label>
+							<label class="form__radio-input-label" for="weight-add">Набор массы</label>
 						</div>
-						<div class="form__pet-program">
+						<div class="form__radio-wrapper">
 							<input class="visually-hidden" id="dont-know" name="radio" type="radio">
-							<label class="form__pet-program-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+							<label class="form__radio-input-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
 						</div>
 					</div>
 				</div>
 			</fieldset>
 
-			<fieldset>
-				<h2 class="sub-title">Контактные данные (владельца кота)</h2>
-				<div class="form__owner-contacts-wrapper">
-					<div class="form__text-field">
-						<label class="form__text-label" for="email">E-mail:*</label>
-						<div class="form__input-text-wrapper">
-							<input class="form__input-text" id="email" type="email" placeholder="kuklachev@gmail.com">
-						</div>
+			<fieldset class="form__set form__set--owner">
+				<h2 class="form__title form__title--owner sub-title">Контактные данные (владельца кота)</h2>
+				<div class="form__owner-info-wrapper">
+					<div class="form__text-input-wrapper">
+						<label class="form__text-input-label" for="email">E-mail:*</label>
+						<input class="form__input-text form__input-text--email" id="email" type="email" placeholder="kuklachev@gmail.com">
+						<svg class="form__input-svg form__input-svg--mail" width="17" height="13">
+							<use xlink:href="./img/svg-sprite.svg#icon-mail"></use>
+						</svg>
 					</div>
-					<div class="form__text-field">
-						<label class="form__text-label" for="tel">Телефон:*</label>
-						<div class="form__input-text-wrapper">
-							<input class="form__input-text" id="tel" type="tel" placeholder="8 (960) 900-60-90">
-						</div>
+					<div class="form__text-input-wrapper">
+						<label class="form__text-input-label" for="tel">Телефон:*</label>
+						<input class="form__input-text form__input-text--tel" id="tel" type="number" placeholder="8 (960) 900-60-90">
+						<svg class="form__input-svg form__input-svg--phone" width="20" height="20">
+							<use xlink:href="./img/svg-sprite.svg#icon-phone"></use>
+						</svg>
 					</div>
 				</div>
 			</fieldset>
 
-			<fieldset>
-				<h2 class="sub-title">Комментарий</h2>
-				<textarea name="comment" id="comment" cols="50" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
+			<fieldset class="form__set form__set--comment">
+				<h2 class="form__title form__title--comment sub-title">Комментарий</h2>
+				<div class="form__textarea-wrapper">
+					<textarea name="comment" id="comment" class="form__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+				</div>
 			</fieldset>
 
-			<fieldset>
-				<h2 class="sub-title">Дополнительно</h2>
-				<div class="form__add-wrapper">
-					<div class="form__add-field">
+			<fieldset class="form__set form__set--add-product">
+				<h2 class="form__title form__title--add-product sub-title">Дополнительно</h2>
+				<div class="form__add-product-wrapper">
+					<div class="form__checkbox-wrapper">
 						<input class="visually-hidden" id="sugar" name="sugar" type="checkbox" checked>
-						<label class="form__add-label" for="sugar">Сахарозаменитель</label>
+						<label class="form__checkbox-input-label" for="sugar">Сахарозаменитель</label>
 					</div>
-					<div class="form__add-field">
+					<div class="form__checkbox-wrapper">
 						<input class="visually-hidden" id="water" name="water" type="checkbox">
-						<label class="form__add-label" for="water">Питьевая вода</label>
+						<label class="form__checkbox-input-label" for="water">Питьевая вода</label>
 					</div>
-					<div class="form__add-field">
+					<div class="form__checkbox-wrapper">
 						<input class="visually-hidden" id="milk" name="milk" type="checkbox">
-						<label class="form__add-label" for="milk">Молоко</label>
+						<label class="form__checkbox-input-label" for="milk">Молоко</label>
 					</div>
-					<div class="form__add-field">
+					<div class="form__checkbox-wrapper">
 						<input class="visually-hidden" id="vitamin" name="vitamin" type="checkbox">
-						<label class="form__add-label" for="vitamin">Витамины</label>
+						<label class="form__checkbox-input-label" for="vitamin">Витамины</label>
 					</div>
 				</div>
 			</fieldset>
-			<button class="form-button green-button" type="submit">Отправить заявку</button>
-			<span class="form__required-messege">* — Обязательные поля</span>
+
+			<div class="form__button-wrapper">
+				<button class="form__button green-button" type="submit">Отправить заявку</button>
+				<span class="form__required-message">* — Обязательные поля</span>
+			</div>
 		</form>
 	</main>
 
