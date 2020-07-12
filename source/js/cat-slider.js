@@ -1,9 +1,9 @@
-if (location.pathname.endsWith('/index.html')) {
-	var catBefore = document.querySelector('.example__before');
-	var catAfter = document.querySelector('.example__after');
-	var buttonBefore = document.querySelector('.example__option--before');
-	var buttonAfter = document.querySelector('.example__option--after');
-	const tabletWidth = window.matchMedia( '(min-width: 768px)' );
+if (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')) {
+	const catBefore = document.querySelector('.example__before');
+	const catAfter = document.querySelector('.example__after');
+	const buttonBefore = document.querySelector('.example__option--before');
+	const buttonAfter = document.querySelector('.example__option--after');
+	var tabletWidth = window.matchMedia( '(min-width: 768px)' );
 
 	buttonBefore.addEventListener('click', function(evt) {
 		if (catAfter.classList.contains('example__cat--show')) {

@@ -1,5 +1,5 @@
-var navButton = document.querySelector('.page-header__nav-button');
-var mainNav = document.querySelector('.main-nav');
+const navButton = document.querySelector('.page-header__nav-button');
+const mainNav = document.querySelector('.main-nav');
 
 
 navButton.addEventListener('click', function(evt) {
