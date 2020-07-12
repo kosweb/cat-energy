@@ -274,9 +274,6 @@
 
 		@media (min-width: $desktop) {
 			background-image: linear-gradient(to bottom, $white 25%, $grey-8 25%);
-
-			.example__img {
-			}
 		}
 	}
 
@@ -290,8 +287,6 @@
 
 		@media (min-width: $desktop) {
 			background-image: linear-gradient(to bottom, $white 25%, $grey-11 25%);
-			.example__img {
-			}
 		}
 	}
 
@@ -402,7 +397,7 @@
 					left: 0;
 					bottom: -5px;
 					border-bottom: 1px dashed $grey-13;
-					transition: all 0.2s ease;
+					transition: all 0.2s;
 				}
 
 				&:hover {
@@ -413,7 +408,7 @@
 
 				&:active {
 					&::after {
-						border-bottom: none;
+						opacity: 0;
 					}
 				}
 			}
