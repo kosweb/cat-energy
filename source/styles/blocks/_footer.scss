@@ -39,6 +39,7 @@
 		line-height: 20px;
 		font-weight: 400;
 		text-transform: uppercase;
+		user-select: none;
 
 		@media (min-width: $tablet) {
 			width: 155px;
