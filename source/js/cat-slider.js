@@ -3,7 +3,7 @@ if (location.pathname.endsWith('/index.html')) {
 	var catAfter = document.querySelector('.example__after');
 	var buttonBefore = document.querySelector('.example__option--before');
 	var buttonAfter = document.querySelector('.example__option--after');
-	const tabletWidth = window.matchMedia( "(min-width: 768px)" );
+	const tabletWidth = window.matchMedia( '(min-width: 768px)' );
 
 	buttonBefore.addEventListener('click', function(evt) {
 		if (catAfter.classList.contains('example__cat--show')) {
@@ -24,8 +24,8 @@ if (location.pathname.endsWith('/index.html')) {
 				document.getElementById('range-slider').value = '0';
 			}
 	});
-}
 
-function rangeSlider(value) {
-	document.querySelector('.example__before').style.width = +value+'%';
-};
+	function rangeSlider(value) {
+		document.querySelector('.example__before').style.width = +value+'%';
+	};
+}

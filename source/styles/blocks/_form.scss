@@ -69,7 +69,7 @@
 	}
 
 	&__pet-parameters,
-	&__pet-programs {
+	&__pet-program-list {
 		display: grid;
 		grid-gap: 15px;
 
@@ -98,7 +98,9 @@
 		}
 	}
 
-	&__pet-programs {
+	&__pet-program-list {
+		@include reset-list-style;
+
 		@media (min-width: $tablet) {
 			padding: 30px 30px;
 			border: 1px solid rgba($color: $grey-5, $alpha: 0.5);
@@ -118,7 +120,7 @@
 		font-size: 16px;
 		line-height: 18px;
 		text-transform: uppercase;
-		cursor: pointer;
+		user-select: none;
 
 		@media (min-width: $tablet) {
 			margin-right: 20px;
@@ -135,23 +137,35 @@
 		line-height: 18px;
 		text-transform: uppercase;
 		color: $grey-3;
-		border: 1px solid rgba($color: $grey-5, $alpha: 0.5);
+		transition: border 0.2s;
 
-		&:hover {
-			border: 1px solid rgba($color: $grey-5, $alpha: 1.0);
+		&:valid {
+			outline-color: $green;
+			border: 1px solid rgba($color: $green, $alpha: 1.0);
 		}
 
 		&:invalid {
-			border: 2px solid $coral;
+			outline-color: $coral;
+			border: 1px solid rgba($color: $coral, $alpha: 1.0);
+		}
+
+		&:invalid:placeholder-shown {
+			outline-color: unset;
+			border: 1px solid rgba($color: $grey-5, $alpha: 0.5);
+		}
+
+		&:valid:placeholder-shown {
+			outline-color: unset;
+			border: 1px solid rgba($color: $grey-5, $alpha: 0.5);
+		}
+
+		&:invalid:hover:placeholder-shown,
+		&:valid:hover:placeholder-shown {
+			border: 1px solid rgba($color: $grey-5, $alpha: 1.0);
 		}
 
 		&::placeholder {
 			color: $grey-3;
-			opacity: 1;
-		}
-
-		&:focus::placeholder {
-			opacity: 0;
 		}
 
 		@media (min-width: $tablet) {
@@ -165,10 +179,10 @@
 				padding-right: 50px;
 			}
 
-			&--email:hover + svg {
+			&--email:valid + svg {
 				fill: $green;
 			}
-			&--tel:hover + svg {
+			&--tel:valid + svg {
 				fill: $green;
 			}
 
@@ -177,6 +191,13 @@
 			}
 			&--tel:invalid + svg {
 				fill: $coral;
+			}
+
+			&--email:invalid:placeholder-shown + svg {
+				fill: unset;
+			}
+			&--tel:invalid:placeholder-shown + svg {
+				fill: unset;
 			}
 		}
 	}
@@ -206,7 +227,6 @@
 			top: 50%;
 			transform: translateY(-50%);
 			display: block;
-			transition: all 0.2s;
 
 			&--mail {
 				right: 20px;
@@ -241,6 +261,7 @@
 		color: $grey-3;
 		border: 1px solid rgba($color: $grey-5, $alpha: 0.5);
 		resize: none;
+		transition: border 0.2s;
 
 		&:hover {
 			border: 1px solid rgba($color: $grey-5, $alpha: 1.0);
@@ -248,11 +269,6 @@
 
 		&::placeholder {
 			color: $grey-3;
-			opacity: 1;
-		}
-
-		&:focus::placeholder {
-			opacity: 0;
 		}
 
 		@media (min-width: $tablet) {
@@ -276,7 +292,7 @@
 		font-size: 16px;
 		line-height: 18px;
 		text-transform: uppercase;
-		cursor: pointer;
+		user-select: none;
 
 		&::before,
 		&::after {
@@ -334,7 +350,8 @@
 		}
 	}
 
-	&__add-product-wrapper {
+	&__add-product-list {
+		@include reset-list-style;
 		display: grid;
 		grid-gap: 15px;
 

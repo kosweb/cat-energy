@@ -207,6 +207,7 @@
 	}
 
 	&__block-cats {
+		user-select: none;
 
 		@media (min-width: $tablet) {
 			background-image: linear-gradient(to bottom, $white 30%, transparent 30%),
@@ -358,10 +359,6 @@
 		font-weight: 400;
 		text-transform: uppercase;
 		z-index: 1;
-
-		span {
-			cursor: pointer;
-		}
 
 		@media (min-width: $phone) and (max-width: $phone-max) {
 
