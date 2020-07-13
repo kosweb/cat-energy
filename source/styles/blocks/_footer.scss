@@ -135,22 +135,20 @@
 
 		@media (min-width: $tablet) {
 			padding: 0;
+			justify-self: end;
 		}
 
 		&-link {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			min-width: 175px;
 			text-decoration: none;
 			font-weight: 400;
 			color: $grey-3;
 			font-size: 16px;
 			line-height: 16px;
-			transition: all 0.2s ease;
-
-			@media (min-width: $tablet) {
-				justify-content: flex-end;
-			}
+			transition: all 0.2s;
 
 			&:hover {
 				svg {
@@ -165,10 +163,10 @@
 
 		svg {
 			fill: $grey-3;
-			transition: all 0.2s ease;
+			transition: all 0.2s;
 
 			@media (min-width: $tablet) {
-				margin-left: calc(23 / 268 * 100%);
+				margin-left: 25px;
 			}
 		}
 	}

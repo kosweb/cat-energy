@@ -11,7 +11,7 @@
   <body>
 		<header class="page-header page-header--index">
 			<div class="page-header__logo-block">
-				<a class="page-header__logo-link">
+				<a class="page-header__logo-link" href="index.html">
 					<picture>
 						<source media="(min-width: 1300px)" srcset="./img/content/logo-desktop.svg">
 						<source media="(min-width: 768px)" srcset="./img/content/logo-tablet.svg">
@@ -67,13 +67,13 @@
 					<h3 class="programs__title">Похудение</h3>
 					<p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
 						Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-					<a href="" class="programs__link">Каталог Slim</a>
+					<a href="#" class="programs__link">Каталог Slim</a>
 				</div>
 				<div class="programs__block programs__block--pro">
 					<h3 class="programs__title">Набор массы</h3>
 					<p class="programs__description">Заработать авторитет среди дворовых котов и даже собак?
 						Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-					<a href="" class="programs__link">Каталог pro</a>
+					<a href="#" class="programs__link">Каталог pro</a>
 				</div>
 			</section>
 
@@ -137,13 +137,11 @@
 								</picture>
 							</div>
 							<div class="example__toggles">
-								<input class="visually-hidden" id="before" type="radio" name="radio" checked>
-								<label for="before" class="example__option example__option--before"><span>Было</span></label>
+								<button class="example__button example__button--before" type="button"><span>Было</span></button>
 								<div class="example__range">
 									<input type="range" min="0" max="100" value="50" id="range-slider" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
 								</div>
-								<input class="visually-hidden" id="after" type="radio" name="radio">
-								<label for="after" id="after-button" class="example__option example__option--after"><span>Стало</span></label>
+								<button class="example__button example__button--after" type="button"><span>Стало</span></button>
 							</div>
 						</div>
 					</div>

@@ -224,7 +224,6 @@
 	&__cats-wrapper {
 		position: relative;
 		min-height: 245px;
-		overflow: hidden;
 
 		@media (min-width: $tablet) {
 			width: 690px;
@@ -309,29 +308,43 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 0;
+		bottom: -15px;
 		width: 210px;
 		margin: 0 auto;
 
-		&::after {
-			content: '';
-			width: 84px;
-			height: 14px;
-			position: absolute;
-			top: calc(50% - 14px / 2);
-			left: calc(50% - 84px / 2);
-			border: 1px solid $grey-5;
-			border-radius: 6px;
-			background-color: $white;
+		@media (min-width: $phone) and (max-width: $phone-max) {
 
-			@media (min-width: $tablet) {
-				display: none;
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
 			}
-		}
 
-		input:checked + label::before,
-		input:checked + label::after {
-			opacity: 1;
+			&::before {
+				width: 35px;
+				height: 6px;
+				position: absolute;
+				top: calc(50% - 6px / 2);
+				left: 69px;
+				background-color: $green;
+				border-radius: 3px;
+				z-index: 1;
+				transition: transform 0.2s;
+			}
+
+			&::after {
+				top: calc(50% - 14px / 2);
+				left: calc(50% - 84px / 2);
+				width: 84px;
+				height: 14px;
+				border: 1px solid $grey-5;
+				border-radius: 6px;
+				background-color: $white;
+			}
+
+			&-btn::before {
+				transform: translateX(37px);
+			}
 		}
 
 		@media (min-width: $tablet) {
@@ -339,52 +352,37 @@
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: 80px;
+			bottom: 70px;
 			z-index: 3;
 		}
 	}
 
-	&__option {
-		position: relative;
-		width: 50%;
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		font-family: Oswald, Arial, sans-serif;
 		color: $grey-1;
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 400;
 		text-transform: uppercase;
-		z-index: 1;
+		background-color: transparent;
+		border: none;
+		outline: none;
 
-		@media (min-width: $phone) and (max-width: $phone-max) {
-
-			&--before::after,
-			&--after::before {
-				content: '';
-				width: 35px;
-				height: 6px;
-				position: absolute;
-				top: calc(50% - 6px / 2);
-				opacity: 0;
-				background-color: $green;
-				border-radius: 3px;
-				transition: all 0.2s ease;
-			}
-
-			&--before::after {
-					right: 0;
-			}
-
-			&--after {
-				text-align: right;
-
-				&::before {
-					left: 0;
-				}
-			}
+		&--before {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		&--after {
+			padding-left: 10px;
+			padding-right: 7px;
 		}
 
 		@media (min-width: $tablet) {
-			width: 52px;
 			font-size: 20px;
 
 			span {
@@ -394,22 +392,23 @@
 					content: '';
 					position: absolute;
 					width: 100%;
-					left: 0;
-					bottom: -5px;
+					left: 50%;
+					bottom: -10px;
+					transform: translateX(-50%);
 					border-bottom: 1px dashed $grey-13;
 					transition: all 0.2s;
 				}
+			}
 
-				&:hover {
-					&::after {
-						border-bottom: 1px solid $grey-14;
-					}
+			&:hover {
+				span::after {
+					border-bottom: 1px solid $grey-14;
 				}
+			}
 
-				&:active {
-					&::after {
-						opacity: 0;
-					}
+			&:active {
+				span::after {
+					opacity: 0;
 				}
 			}
 		}
@@ -431,7 +430,6 @@
 				border-radius: 3px;
 				background-color: $grey-12;
 				outline: none;
-				cursor: pointer;
 
 				&::-webkit-slider-thumb {
 					-webkit-appearance: none;
@@ -439,7 +437,7 @@
 					height: 34px;
 					background-color: $green;
 					border-radius: 50%;
-					cursor: pointer;
+					cursor: ew-resize;
 					transform: rotate(180deg);
 					transition: box-shadow 0.2s ease;
 
