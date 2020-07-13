@@ -11,7 +11,7 @@
   <body>
 		<header class="page-header page-header--index">
 			<div class="page-header__logo-block">
-				<a class="page-header__logo-link">
+				<a class="page-header__logo-link" href="index.html">
 					<picture>
 						<source media="(min-width: 1300px)" srcset="./img/content/logo-desktop.svg">
 						<source media="(min-width: 768px)" srcset="./img/content/logo-tablet.svg">
@@ -67,13 +67,13 @@
 					<h3 class="programs__title">Похудение</h3>
 					<p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
 						Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-					<a href="" class="programs__link">Каталог Slim</a>
+					<a href="#" class="programs__link">Каталог Slim</a>
 				</div>
 				<div class="programs__block programs__block--pro">
 					<h3 class="programs__title">Набор массы</h3>
 					<p class="programs__description">Заработать авторитет среди дворовых котов и даже собак?
 						Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-					<a href="" class="programs__link">Каталог pro</a>
+					<a href="#" class="programs__link">Каталог pro</a>
 				</div>
 			</section>
 
@@ -137,13 +137,11 @@
 								</picture>
 							</div>
 							<div class="example__toggles">
-								<input class="visually-hidden" id="before" type="radio" name="radio" checked>
-								<label for="before" class="example__option example__option--before"><span>Было</span></label>
+								<button class="example__button example__button--before" type="button"><span>Было</span></button>
 								<div class="example__range">
 									<input type="range" min="0" max="100" value="50" id="range-slider" class="example__range-slider" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
 								</div>
-								<input class="visually-hidden" id="after" type="radio" name="radio">
-								<label for="after" id="after-button" class="example__option example__option--after"><span>Стало</span></label>
+								<button class="example__button example__button--after" type="button"><span>Стало</span></button>
 							</div>
 						</div>
 					</div>
@@ -158,6 +156,7 @@
 			</div>
 
 			<section class="page-footer__map map">
+				<h3 class="visually-hidden">Карта</h3>
 				<div class="map__interactive">
 					<picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/bg-map-desktop@1x.webp, ./img/content/bg-map-desktop@2x.webp 2x">
@@ -169,11 +168,12 @@
             <img class="map__img" src="./img/content/bg-map-mobile@1x.png" srcset="./img/content/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
 					</picture>
 					<img class="map__pin" src="./img/content/map-pin.png" alt="Пин карты">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
 			</section>
 
 			<section class="page-footer__bottom">
+				<h3 class="visually-hidden">Дополнительная информация</h3>
 				<div class="page-footer__logo-block">
 					<a href="index.html" class="page-footer__logo-link">
 						<img class="page-footer__logo" src="./img/content/logo-text.svg" alt="Логотип ‎Cat Energy" width="128" height="24">
@@ -183,21 +183,21 @@
 					<ul class="social__list">
 						<li class="social__item">
 							<a href="https://vk.com/" class="social__link social__link--vk">
-								<svg width="22" height="12">
+								<svg width="22" height="12" role="image" aria-label="vkontakte logo">
 									<use xlink:href="./img/svg-sprite.svg#icon-vk"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="social__item">
 							<a href="https://instagram.com" class="social__link social__link--inst">
-								<svg width="16" height="16">
+								<svg width="16" height="16" role="image" aria-label="instagram logo">
 									<use xlink:href="./img/svg-sprite.svg#icon-insta"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="social__item">
 							<a href="https://facebook.com" class="social__link social__link--fb">
-								<svg width="10" height="19">
+								<svg width="10" height="19" role="image" aria-label="facebook logo">
 									<use xlink:href="./img/svg-sprite.svg#icon-fb"></use>
 								</svg>
 							</a>

@@ -11,7 +11,7 @@
 <body>
 	<header class="page-header page-header--form">
 		<div class="page-header__logo-block">
-			<a class="page-header__logo-link">
+			<a class="page-header__logo-link" href="index.html">
 				<picture>
 					<source media="(min-width: 1300px)" srcset="./img/content/logo-desktop.svg">
 					<source media="(min-width: 768px)" srcset="./img/content/logo-tablet.svg">
@@ -41,7 +41,7 @@
 		</nav>
 	</header>
 
-	<main class="page-form">
+	<main class="page-form page-main">
 		<div class="page-form__wrapper container">
 			<h1 class="page-form__title main-title">Подбор программы</h1>
 			<p class="page-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
@@ -145,6 +145,7 @@
 		</div>
 
 		<section class="page-footer__map map">
+			<h3 class="visually-hidden">Карта</h3>
 			<div class="map__interactive">
 				<picture>
 					<source type="image/webp" media="(min-width: 1300px)" srcset="./img/content/bg-map-desktop@1x.webp, ./img/content/bg-map-desktop@2x.webp 2x">
@@ -156,11 +157,12 @@
 					<img class="map__img" src="./img/content/bg-map-mobile@1x.png" srcset="./img/content/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
 				</picture>
 				<img class="map__pin" src="./img/content/map-pin.png" alt="Пин карты">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858715877478!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sru!2sua!4v1593211093774!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</div>
 		</section>
 
 		<section class="page-footer__bottom">
+			<h3 class="visually-hidden">Дополнительная информация</h3>
 			<div class="page-footer__logo-block">
 				<a href="index.html" class="page-footer__logo-link">
 					<img class="page-footer__logo" src="./img/content/logo-text.svg" alt="Логотип ‎Cat Energy" width="128" height="24">
@@ -170,21 +172,21 @@
 				<ul class="social__list">
 					<li class="social__item">
 						<a href="https://vk.com/" class="social__link social__link--vk">
-							<svg width="22" height="22">
+							<svg width="22" height="22" role="image" aria-label="vkontakte logo">
 								<use xlink:href="./img/svg-sprite.svg#icon-vk"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="social__item">
 						<a href="https://instagram.com" class="social__link social__link--inst">
-							<svg width="16" height="16">
+							<svg width="16" height="16" role="image" aria-label="instagram logo">
 								<use xlink:href="./img/svg-sprite.svg#icon-insta"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="social__item">
 						<a href="https://facebook.com" class="social__link social__link--fb">
-							<svg width="10" height="19">
+							<svg width="10" height="19" role="image" aria-label="facebook logo">
 								<use xlink:href="./img/svg-sprite.svg#icon-fb"></use>
 							</svg>
 						</a>
