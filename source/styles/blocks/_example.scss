@@ -383,6 +383,13 @@
 		}
 
 		@media (min-width: $tablet) {
+			&--before {
+				margin-right: 15px;
+			}
+			&--after {
+				margin-left: 15px;
+			}
+
 			font-size: 20px;
 
 			span {
